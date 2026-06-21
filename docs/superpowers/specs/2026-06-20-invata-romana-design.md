@@ -172,8 +172,8 @@ Modalities (each a small component with a shared `onResult` contract):
 
 ## 8. Spaced repetition & adaptivity
 
-- **SM-2-lite / Leitner** per item: `{ ease/box, interval, due, lapses, seen }`,
-  persisted in IndexedDB.
+- **SM-2-lite** (ease factor + interval, not raw Leitner boxes) per item:
+  `{ ease, interval, due, lapses, seen }`, persisted in IndexedDB.
 - A session = **all due reviews + a capped number of new items** (configurable,
   default small).
 - **Mastery** levels drive the "useful words known" count and can-do checkpoints.
