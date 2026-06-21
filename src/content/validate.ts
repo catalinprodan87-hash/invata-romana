@@ -52,7 +52,7 @@ function validateExercise(ex: Exercise, ids: Set<string>, where: string): void {
 
 export function validateLesson(data: unknown, ids: Set<string>): asserts data is Lesson {
   const l = data as Lesson
-  str(l.id, 'lesson.id'); str(l.title_uk, 'lesson.title_uk'); str(l.goal_uk, 'lesson.goal_uk')
+  str(l.id, 'lesson.id'); str(l.title_uk, 'lesson.title_uk'); str(l.goal_uk, 'lesson.goal_uk'); str(l.unit_uk, 'lesson.unit_uk')
   if (!CEFR.includes(l.level)) fail(`lesson ${l.id}.level invalid`)
   if (!Array.isArray(l.dialogue) || l.dialogue.length === 0) fail(`lesson ${l.id}.dialogue empty`)
   if (!Array.isArray(l.newItemIds)) fail(`lesson ${l.id}.newItemIds must be an array`)
@@ -62,4 +62,5 @@ export function validateLesson(data: unknown, ids: Set<string>): asserts data is
   if (!l.mission || !Array.isArray(l.mission.realWorld_uk) || l.mission.realWorld_uk.length === 0) {
     fail(`lesson ${l.id}.mission.realWorld_uk empty`)
   }
+  str(l.mission.prompt_uk, 'lesson.mission.prompt_uk')
 }

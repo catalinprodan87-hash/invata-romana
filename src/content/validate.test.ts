@@ -29,3 +29,14 @@ test('lesson referencing unknown item id is rejected', () => {
   }
   expect(() => validateLesson(lesson, new Set(['buna-ziua']))).toThrow(/nope/)
 })
+
+test('lesson missing unit_uk is rejected', () => {
+  const base = {
+    id: 'l1', level: 'A1', title_uk: 'T', goal_uk: 'G',
+    dialogue: [{ speaker: 'A', ro: 'Bună', uk: 'Привіт' }],
+    newItemIds: [], grammarNotes_uk: [],
+    exercises: [{ type: 'production', prompt_uk: 'p', answer_ro: 'Bună' }],
+    mission: { prompt_uk: 'p', lines: [], realWorld_uk: ['x'] },
+  }
+  expect(() => validateLesson(base as any, new Set())).toThrow(/unit_uk/)
+})
