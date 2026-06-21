@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ---- Design tokens ---- */
+  --color-primary: #1e5aa8;
+  --color-primary-dark: #16407a;
+  --color-accent: #f2c037;
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-text: #1a2233;
+  --color-text-muted: #5b6678;
+  --color-success: #2e9e5b;
+  --color-warning: #e08a1e;
+  --color-danger: #d2433a;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Base font size — the Settings text-size control scales this, and because
+     the type scale is defined in rem, the whole UI scales with it. */
+  font-size: 16px;
+
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Large text-size preference (set on <html> by the Settings provider). */
+html[data-text-size='large'] {
+  font-size: 19px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Noto Sans', Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* Always-visible, high-contrast focus ring for keyboard users. */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
