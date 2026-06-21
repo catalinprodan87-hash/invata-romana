@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "validate:content": "vitest run src/content/data/content.test.ts",
+    "build": "npm run validate:content && tsc -b && vite build",
     "preview": "vite preview --host",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",

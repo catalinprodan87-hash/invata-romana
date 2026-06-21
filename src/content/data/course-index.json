@@ -1,0 +1,14 @@
+{
+  "units": [
+    {
+      "id": "a1-survival",
+      "unit_uk": "Перший тиждень",
+      "lessonIds": [
+        "a1-survival-01",
+        "a1-survival-02",
+        "a1-survival-03",
+        "a1-survival-04"
+      ]
+    }
+  ]
+}

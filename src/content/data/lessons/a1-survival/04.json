@@ -1,0 +1,81 @@
+{
+  "id": "a1-survival-04",
+  "level": "A1",
+  "unit_uk": "Перший тиждень",
+  "title_uk": "Числа та ціни",
+  "goal_uk": "Запитати ціну, зрозуміти числа від 1 до 10 і попросити рахунок.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Cât costă cafeaua?", "uk": "Скільки коштує кава?" },
+    { "speaker": "Vânzător", "ro": "Cinci lei.", "uk": "П'ять леїв." },
+    { "speaker": "Olena", "ro": "Și pâinea? Cât costă?", "uk": "А хліб? Скільки коштує?" },
+    { "speaker": "Vânzător", "ro": "Trei lei.", "uk": "Три леї." },
+    { "speaker": "Olena", "ro": "Bine. Cât face în total?", "uk": "Добре. Скільки разом?" },
+    { "speaker": "Vânzător", "ro": "Opt lei. Nota de plată, vă rog.", "uk": "Вісім леїв. Рахунок, будь ласка." },
+    { "speaker": "Olena", "ro": "Poftim zece lei.", "uk": "Ось десять леїв." }
+  ],
+  "newItemIds": [
+    "cat-costa",
+    "cat",
+    "lei",
+    "unu",
+    "doi",
+    "trei",
+    "patru",
+    "cinci",
+    "zece",
+    "ajutor",
+    "scuzati-ma",
+    "nu-inteleg"
+  ],
+  "grammarNotes_uk": [
+    "«Cât costă?» — «скільки коштує?». Ціни в Румунії називають у леях (lei): «cinci lei» — п'ять леїв. Слово «lei» не змінюється після числа.",
+    "Числа 1–5: unu, doi, trei, patru, cinci; далі важливі zece (10). Якщо не зрозуміли число, скажіть «Nu înțeleg» і попросіть «Scuzați-mă, mai rar»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "cat-costa"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "cinci"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "doi",
+      "distractorId": "trei"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Продавець каже «Cinci lei». Скільки це?",
+      "options_uk": ["Три леї", "П'ять леїв", "Десять леїв"],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як запитати ціну хліба?",
+      "options_uk": ["Cât costă pâinea?", "Aveți pâine?", "Vreau o pâine."],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Запитайте, скільки коштує кава, і попросіть рахунок.",
+      "answer_ro": "Cât costă cafeaua? Nota de plată, vă rog.",
+      "wordBank": ["Cât", "costă", "cafeaua", "Nota", "de", "plată", "vă", "rog"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Запитайте ціну реальної речі румунською й спробуйте зрозуміти число у відповідь.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Scuzați-mă, cât costă?", "uk": "Перепрошую, скільки коштує?" },
+      { "speaker": "Ви", "ro": "Mai rar, vă rog. Nu înțeleg.", "uk": "Повільніше, будь ласка. Я не розумію." },
+      { "speaker": "Ви", "ro": "Mulțumesc!", "uk": "Дякую!" }
+    ],
+    "realWorld_uk": [
+      "У магазині, на ринку чи в кав'ярні оберіть один товар.",
+      "Запитайте «Cât costă?» і уважно слухайте число (unu–zece).",
+      "Якщо не вловили — спокійно скажіть «Mai rar, vă rog» і слухайте ще раз.",
+      "Повторіть почуте число вголос, щоб переконатися, і подякуйте «Mulțumesc!»."
+    ]
+  }
+}

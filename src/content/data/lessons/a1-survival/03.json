@@ -1,0 +1,83 @@
+{
+  "id": "a1-survival-03",
+  "level": "A1",
+  "unit_uk": "Перший тиждень",
+  "title_uk": "У магазині",
+  "goal_uk": "Попросити продукти, запитати, чи щось є, і заплатити карткою.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua! Aveți pâine?", "uk": "Добрий день! У вас є хліб?" },
+    { "speaker": "Vânzător", "ro": "Da, avem. Câte vreți?", "uk": "Так, є. Скільки бажаєте?" },
+    { "speaker": "Olena", "ro": "Vreau o pâine și o apă, vă rog.", "uk": "Я хочу хліб і воду, будь ласка." },
+    { "speaker": "Vânzător", "ro": "Altceva?", "uk": "Щось іще?" },
+    { "speaker": "Olena", "ro": "O cafea cu lapte. Și o pungă, vă rog.", "uk": "Каву з молоком. І пакет, будь ласка." },
+    { "speaker": "Vânzător", "ro": "Bine. Plătiți cu cardul?", "uk": "Добре. Платитимете карткою?" },
+    { "speaker": "Olena", "ro": "Da, cu cardul. Mulțumesc!", "uk": "Так, карткою. Дякую!" }
+  ],
+  "newItemIds": [
+    "magazin",
+    "vreau",
+    "as-dori",
+    "aveti",
+    "paine",
+    "apa",
+    "cafea",
+    "lapte",
+    "punga",
+    "card",
+    "bani",
+    "nota-de-plata",
+    "da",
+    "nu"
+  ],
+  "grammarNotes_uk": [
+    "«Vreau» — це «я хочу» (пряме). М'якіше й ввічливіше звучить «Aș dori» — «я хотів(-ла) би», як українське «мені б хотілося».",
+    "Перед іменником часто стоїть «o» або «un» — це «один/одна» (артикль): «o pâine» (хлібина), «o apă» (вода), «un card» (картка). Рід ви вивчите згодом; поки що просто запам'ятовуйте пару разом."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "vreau"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "as-dori"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "paine",
+      "distractorId": "bani"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як ввічливо сказати «я хотів би каву»?",
+      "options_uk": ["Vreau o cafea!", "Aș dori o cafea, vă rog.", "Aveți cafea?"],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Продавець питає «Plătiți cu cardul?». Про що йдеться?",
+      "options_uk": ["Чи платитимете карткою", "Чи хочете пакет", "Чи маєте хліб"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "У магазині попросіть хліб і воду (ввічливо).",
+      "answer_ro": "Vreau o pâine și o apă, vă rog.",
+      "wordBank": ["Vreau", "o", "pâine", "și", "apă", "vă", "rog"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зайдіть у магазин і купіть щось одне, говорячи румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua! Aveți apă?", "uk": "Добрий день! У вас є вода?" },
+      { "speaker": "Ви", "ro": "Vreau o apă, vă rog.", "uk": "Я хочу воду, будь ласка." },
+      { "speaker": "Ви", "ro": "Plătesc cu cardul. Mulțumesc!", "uk": "Я плачу карткою. Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Виберіть один реальний товар, який вам потрібен (вода, хліб, кава).",
+      "Привітайтеся й запитайте «Aveți...?» або одразу скажіть «Vreau..., vă rog».",
+      "На касі скажіть «cu cardul» або «cu bani» — як платитимете.",
+      "Подякуйте «Mulțumesc!». Ви щойно зробили покупку румунською!"
+    ]
+  }
+}

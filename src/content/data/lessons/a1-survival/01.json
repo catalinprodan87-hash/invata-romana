@@ -1,0 +1,83 @@
+{
+  "id": "a1-survival-01",
+  "level": "A1",
+  "unit_uk": "Перший тиждень",
+  "title_uk": "Привітання та знайомство",
+  "goal_uk": "Привітатися, назвати своє ім'я та сказати, звідки ви.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua!", "uk": "Добрий день!" },
+    { "speaker": "Mihai", "ro": "Bună ziua! Cum te numești?", "uk": "Добрий день! Як тебе звати?" },
+    { "speaker": "Olena", "ro": "Mă numesc Olena. Sunt din Ucraina.", "uk": "Мене звати Олена. Я з України." },
+    { "speaker": "Mihai", "ro": "Încântat! Eu sunt Mihai.", "uk": "Дуже приємно! Я Михай." },
+    { "speaker": "Olena", "ro": "Vorbesc puțin românește.", "uk": "Я трохи розмовляю румунською." },
+    { "speaker": "Mihai", "ro": "Bine! Pa, pe mâine!", "uk": "Добре! Бувай, до завтра!" },
+    { "speaker": "Olena", "ro": "La revedere!", "uk": "До побачення!" }
+  ],
+  "newItemIds": [
+    "buna-ziua",
+    "buna",
+    "buna-seara",
+    "ce-faci",
+    "bine",
+    "ma-numesc",
+    "cum-te-numesti",
+    "incantat",
+    "sunt-din",
+    "ucraina",
+    "vorbesc",
+    "putin",
+    "la-revedere",
+    "pa"
+  ],
+  "grammarNotes_uk": [
+    "«Bună ziua» — це ввічливе вітання вдень («добрий день»). Просто «Bună» — неформальне «привіт», як до знайомих. Увечері кажуть «Bună seara».",
+    "Щоб назватися, кажуть «Mă numesc + ім'я» (буквально «мене звуть»). Дієслово «a fi» (бути) теж працює: «Eu sunt Olena» — «Я Олена»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "buna-ziua"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "ma-numesc"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "buna",
+      "distractorId": "bine"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як по-румунськи ввічливо привітатися вдень?",
+      "options_uk": ["Bună seara", "Bună ziua", "La revedere"],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Що означає «Mă numesc Olena»?",
+      "options_uk": ["Я з України", "Мене звати Олена", "Дуже приємно"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Скажіть румунською: «Мене звати Андрій. Я з України.»",
+      "answer_ro": "Mă numesc Andrii. Sunt din Ucraina.",
+      "wordBank": ["Mă", "numesc", "Andrii", "Sunt", "din", "Ucraina"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Познайомтеся з однією реальною людиною румунською — із сусідом, продавцем чи волонтером.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua! Mă numesc...", "uk": "Добрий день! Мене звати..." },
+      { "speaker": "Ви", "ro": "Sunt din Ucraina. Vorbesc puțin românește.", "uk": "Я з України. Я трохи розмовляю румунською." },
+      { "speaker": "Ви", "ro": "La revedere!", "uk": "До побачення!" }
+    ],
+    "realWorld_uk": [
+      "Знайдіть людину, з якою ви ще не говорили (сусід, працівник магазину, волонтер).",
+      "Привітайтеся: «Bună ziua!» і назвіть своє ім'я: «Mă numesc...».",
+      "Додайте «Sunt din Ucraina» і завершіть «La revedere!».",
+      "Зробіть це сьогодні хоча б один раз — нехай вийде недосконало."
+    ]
+  }
+}

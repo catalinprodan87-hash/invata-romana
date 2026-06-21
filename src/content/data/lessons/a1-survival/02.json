@@ -1,0 +1,83 @@
+{
+  "id": "a1-survival-02",
+  "level": "A1",
+  "unit_uk": "Перший тиждень",
+  "title_uk": "Ввічливість і прохання про допомогу",
+  "goal_uk": "Подякувати, вибачитися й попросити, щоб говорили повільніше або повторили.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Scuzați-mă, mă puteți ajuta?", "uk": "Перепрошую, можете мені допомогти?" },
+    { "speaker": "Trecător", "ro": "Da, sigur. Ce căutați?", "uk": "Так, звісно. Що ви шукаєте?" },
+    { "speaker": "Olena", "ro": "Nu înțeleg. Mai rar, vă rog.", "uk": "Я не розумію. Повільніше, будь ласка." },
+    { "speaker": "Trecător", "ro": "Ce... cău-tați?", "uk": "Що... ви шукаєте?" },
+    { "speaker": "Olena", "ro": "Unde este farmacia?", "uk": "Де аптека?" },
+    { "speaker": "Trecător", "ro": "Acolo, la dreapta.", "uk": "Он там, праворуч." },
+    { "speaker": "Olena", "ro": "Mulțumesc mult!", "uk": "Дуже дякую!" },
+    { "speaker": "Trecător", "ro": "Cu plăcere!", "uk": "Будь ласка!" }
+  ],
+  "newItemIds": [
+    "multumesc",
+    "cu-placere",
+    "te-rog",
+    "va-rog",
+    "scuze",
+    "scuzati-ma",
+    "nu-inteleg",
+    "mai-rar",
+    "puteti-repeta",
+    "ma-puteti-ajuta",
+    "unde-este",
+    "farmacie",
+    "toaleta"
+  ],
+  "grammarNotes_uk": [
+    "«Te rog» — це «будь ласка» на «ти» (до знайомих), а «vă rog» — ввічливе «будь ласка» на «Ви». З незнайомцями завжди обирайте «vă rog».",
+    "Щоб попросити допомогу, корисні дві готові фрази: «Mă puteți ajuta?» (можете допомогти?) і «Puteți repeta?» (можете повторити?). «Puteți» — це ввічливе «можете» на «Ви»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "multumesc"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "ma-puteti-ajuta"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "te-rog",
+      "distractorId": "va-rog"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Ви хочете, щоб людина говорила повільніше. Що ви скажете?",
+      "options_uk": ["Mulțumesc mult!", "Mai rar, vă rog.", "La revedere!"],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Що відповідають на «Mulțumesc»?",
+      "options_uk": ["Cu plăcere", "Scuzați-mă", "Nu înțeleg"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Перепросіть і запитайте, де туалет (ввічливо, на «Ви»).",
+      "answer_ro": "Scuzați-mă, unde este toaleta, vă rog?",
+      "wordBank": ["Scuzați-mă", "unde", "este", "toaleta", "vă", "rog"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зупиніть когось на вулиці й ввічливо запитайте дорогу румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Scuzați-mă, mă puteți ajuta?", "uk": "Перепрошую, можете мені допомогти?" },
+      { "speaker": "Ви", "ro": "Unde este farmacia, vă rog?", "uk": "Де аптека, будь ласка?" },
+      { "speaker": "Ви", "ro": "Mai rar, vă rog. Mulțumesc!", "uk": "Повільніше, будь ласка. Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Оберіть місце, яке хочете знайти (аптеку, зупинку, туалет).",
+      "Ввічливо зупиніть перехожого: «Scuzați-mă, mă puteți ajuta?».",
+      "Запитайте «Unde este...?» і не бійтеся сказати «Mai rar, vă rog», якщо не зрозуміли.",
+      "Подякуйте: «Mulțumesc!». Навіть якщо ви не все зрозуміли — ви впоралися."
+    ]
+  }
+}
