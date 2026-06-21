@@ -19,9 +19,10 @@ const PRIMARY = '#1E5AA8'
 const PRIMARY_DARK = '#16407A'
 const ACCENT = '#F2C037'
 
-// Standard icon: rounded square + open book glyph. `pad` keeps the glyph inside the
-// maskable safe zone when rendered full-bleed.
-function iconSvg({ rounded = true, pad = 0.5 } = {}) {
+// Standard icon: rounded square + open book glyph. `pad` controls glyph inset:
+// standard icons use pad = 0.12 (small breathing room), maskable icons use pad = 1
+// (full safe-zone inset for full-bleed rendering).
+function iconSvg({ rounded = true, pad = 0.12 } = {}) {
   const radius = rounded ? 96 : 0
   const scale = 1 - pad * 0.18
   const t = 256 - 256 * scale
@@ -44,7 +45,7 @@ async function render(svg, size, file) {
 
 async function main() {
   await mkdir(outDir, { recursive: true })
-  const standard = iconSvg({ rounded: true, pad: 0 })
+  const standard = iconSvg({ rounded: true, pad: 0.12 })
   const maskable = iconSvg({ rounded: false, pad: 1 })
 
   console.log('Generating PWA icons…')
