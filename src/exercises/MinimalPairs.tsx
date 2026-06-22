@@ -3,6 +3,7 @@ import type { ExerciseProps } from './types'
 import type { Exercise } from '../content/types'
 import { getItemById } from '../content/load'
 import SpeakButton from '../ui/components/SpeakButton'
+import Button from '../ui/components/Button'
 import { t } from '../ui/strings'
 
 type MinimalPairsExercise = Extract<Exercise, { type: 'minimalPairs' }>
@@ -11,7 +12,7 @@ type OptionState = 'idle' | 'correct' | 'wrong' | 'reveal'
 
 export default function MinimalPairs({ exercise, onDone }: ExerciseProps<MinimalPairsExercise>) {
   const [selected, setSelected] = useState<string | null>(null)
-  const [done, setDone] = useState(false)
+  const answered = selected !== null
 
   const item = getItemById(exercise.itemId)
   const distractor = getItemById(exercise.distractorId)
@@ -32,15 +33,12 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
   }
 
   function handleSelect(choice: string) {
-    if (done) return
+    if (answered) return
     setSelected(choice)
-    setDone(true)
-    const correct = choice === item!.ro
-    onDone(correct ? 'good' : 'again')
   }
 
   function stateFor(option: string): OptionState {
-    if (!done) return 'idle'
+    if (!answered) return 'idle'
     if (option === item!.ro) return 'correct'
     if (option === selected) return 'wrong'
     return 'reveal'
@@ -71,7 +69,7 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
             <button
               key={option}
               type="button"
-              disabled={done}
+              disabled={answered}
               onClick={() => handleSelect(option)}
               className={[
                 'min-h-tap w-full rounded-md px-4 py-3 text-xl font-semibold transition-colors',
@@ -79,16 +77,26 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
               ].join(' ')}
             >
               {option}
-              {done && state === 'correct' && (
+              {answered && state === 'correct' && (
                 <span className="ml-2 text-base font-normal text-green-700">{t.correct}</span>
               )}
-              {done && state === 'wrong' && (
+              {answered && state === 'wrong' && (
                 <span className="ml-2 text-base font-normal text-red-600">{t.incorrect}</span>
               )}
             </button>
           )
         })}
       </div>
+
+      {/* Continue only after the learner has seen the result */}
+      {answered && (
+        <Button
+          onClick={() => onDone(selected === item!.ro ? 'good' : 'again')}
+          className="w-full"
+        >
+          {t.next}
+        </Button>
+      )}
     </div>
   )
 }

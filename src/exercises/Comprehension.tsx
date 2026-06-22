@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { ExerciseProps } from './types'
 import type { Exercise } from '../content/types'
+import Button from '../ui/components/Button'
 import { t } from '../ui/strings'
 
 type ComprehensionExercise = Extract<Exercise, { type: 'comprehension' }>
@@ -9,17 +10,15 @@ type OptionState = 'idle' | 'correct' | 'wrong' | 'reveal'
 
 export default function Comprehension({ exercise, onDone }: ExerciseProps<ComprehensionExercise>) {
   const [selected, setSelected] = useState<number | null>(null)
-  const [done, setDone] = useState(false)
+  const answered = selected !== null
 
   function handleSelect(index: number) {
-    if (done) return
+    if (answered) return
     setSelected(index)
-    setDone(true)
-    onDone(index === exercise.answerIndex ? 'good' : 'again')
   }
 
   function stateFor(index: number): OptionState {
-    if (!done) return 'idle'
+    if (!answered) return 'idle'
     if (index === exercise.answerIndex) return 'correct'
     if (index === selected) return 'wrong'
     return 'reveal'
@@ -47,7 +46,7 @@ export default function Comprehension({ exercise, onDone }: ExerciseProps<Compre
             <button
               key={index}
               type="button"
-              disabled={done}
+              disabled={answered}
               onClick={() => handleSelect(index)}
               className={[
                 'min-h-tap w-full rounded-md px-4 py-3 text-left text-base font-medium transition-colors',
@@ -55,16 +54,26 @@ export default function Comprehension({ exercise, onDone }: ExerciseProps<Compre
               ].join(' ')}
             >
               {option}
-              {done && state === 'correct' && (
+              {answered && state === 'correct' && (
                 <span className="ml-2 text-sm font-normal text-green-700">{t.correct}</span>
               )}
-              {done && state === 'wrong' && (
+              {answered && state === 'wrong' && (
                 <span className="ml-2 text-sm font-normal text-red-600">{t.incorrect}</span>
               )}
             </button>
           )
         })}
       </div>
+
+      {/* Continue only after the learner has seen the result */}
+      {answered && (
+        <Button
+          onClick={() => onDone(selected === exercise.answerIndex ? 'good' : 'again')}
+          className="w-full"
+        >
+          {t.next}
+        </Button>
+      )}
     </div>
   )
 }
