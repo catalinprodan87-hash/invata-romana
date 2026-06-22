@@ -11,7 +11,7 @@
     { "speaker": "Vânzător", "ro": "Trei lei.", "uk": "Три леї." },
     { "speaker": "Olena", "ro": "Bine. Cât face în total?", "uk": "Добре. Скільки разом?" },
     { "speaker": "Vânzător", "ro": "Opt lei. Nota de plată, vă rog.", "uk": "Вісім леїв. Рахунок, будь ласка." },
-    { "speaker": "Olena", "ro": "Poftim zece lei.", "uk": "Ось десять леїв." }
+    { "speaker": "Olena", "ro": "Zece lei, vă rog.", "uk": "Десять леїв, будь ласка." }
   ],
   "newItemIds": [
     "cat-costa",
@@ -22,10 +22,9 @@
     "trei",
     "patru",
     "cinci",
+    "opt",
     "zece",
-    "ajutor",
-    "scuzati-ma",
-    "nu-inteleg"
+    "ajutor"
   ],
   "grammarNotes_uk": [
     "«Cât costă?» — «скільки коштує?». Ціни в Румунії називають у леях (lei): «cinci lei» — п'ять леїв. Слово «lei» не змінюється після числа.",

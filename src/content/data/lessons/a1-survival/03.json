@@ -45,7 +45,7 @@
     {
       "type": "minimalPairs",
       "itemId": "paine",
-      "distractorId": "bani"
+      "distractorId": "bine"
     },
     {
       "type": "comprehension",
@@ -63,7 +63,7 @@
       "type": "production",
       "prompt_uk": "У магазині попросіть хліб і воду (ввічливо).",
       "answer_ro": "Vreau o pâine și o apă, vă rog.",
-      "wordBank": ["Vreau", "o", "pâine", "și", "apă", "vă", "rog"]
+      "wordBank": ["Vreau", "o", "o", "pâine", "și", "apă", "vă", "rog"]
     }
   ],
   "mission": {

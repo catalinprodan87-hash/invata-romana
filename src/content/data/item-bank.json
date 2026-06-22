@@ -30,7 +30,7 @@
       "id": "buna-seara",
       "ro": "Bună seara",
       "uk": "Добрий вечір",
-      "pron_uk": "бýна ся́ра",
+      "pron_uk": "бýна сéара",
       "ipa": "ˈbu.nə ˈse̯a.ra",
       "pos": "phrase",
       "freqRank": 20,
@@ -82,7 +82,7 @@
       "id": "ce-faci",
       "ro": "Ce faci?",
       "uk": "Як справи?",
-      "pron_uk": "че фач",
+      "pron_uk": "че фачí",
       "ipa": "tʃe fatʃʲ",
       "pos": "phrase",
       "freqRank": 25,
@@ -595,8 +595,8 @@
       "freqRank": 50,
       "cefr": "A1",
       "tags": ["numbers"],
-      "example_ro": "Vreau unu, te rog.",
-      "example_uk": "Я хочу один, будь ласка."
+      "example_ro": "Vreau un bilet, te rog.",
+      "example_uk": "Я хочу один квиток, будь ласка."
     },
     {
       "id": "doi",
@@ -608,8 +608,8 @@
       "freqRank": 51,
       "cefr": "A1",
       "tags": ["numbers"],
-      "example_ro": "Doi cafea, vă rog... două cafele.",
-      "example_uk": "Дві кави, будь ласка."
+      "example_ro": "Doi copii, vă rog.",
+      "example_uk": "Двоє дітей, будь ласка."
     },
     {
       "id": "trei",
@@ -662,6 +662,19 @@
       "tags": ["numbers"],
       "example_ro": "Costă zece lei.",
       "example_uk": "Коштує десять леїв."
+    },
+    {
+      "id": "opt",
+      "ro": "Opt",
+      "uk": "Вісім",
+      "pron_uk": "опт",
+      "ipa": "opt",
+      "pos": "numeral",
+      "freqRank": 56,
+      "cefr": "A1",
+      "tags": ["numbers"],
+      "example_ro": "Opt lei, vă rog.",
+      "example_uk": "Вісім леїв, будь ласка."
     },
     {
       "id": "cat",
