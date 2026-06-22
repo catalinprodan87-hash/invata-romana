@@ -12,6 +12,7 @@ export const t = {
   close: 'Закрити',
   listen: 'Слухати',
   record: 'Записати',
+  recording: 'Йде запис…',
   stop: 'Зупинити',
   playYours: 'Відтворити ваше',
   playModel: 'Відтворити зразок',
