@@ -38,4 +38,7 @@ export const t = {
   correct: 'Правильно!',
   incorrect: 'Неправильно',
   itemNotFound: 'Картку не знайдено',
+  correctIs: 'Правильна відповідь:',
+  tapToAnswer: 'Натисніть слово, щоб скласти відповідь',
+  clear: 'Очистити',
 } as const
