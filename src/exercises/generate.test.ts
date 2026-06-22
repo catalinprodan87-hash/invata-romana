@@ -31,11 +31,6 @@ describe('pickMinimalPairDistractor', () => {
     expect(pickMinimalPairDistractor(item, [item])).toBeUndefined()
   })
 
-  it('returns undefined when bank contains only the target item', () => {
-    const item = makeItem('a', 'bună')
-    expect(pickMinimalPairDistractor(item, [item])).toBeUndefined()
-  })
-
   it('returns the bank item with the highest similarity (but < 1) to the target', () => {
     const target = makeItem('t', 'buna')
     // 'bun' is most similar to 'buna' (distance 1, similarity = 1 - 1/4 = 0.75)

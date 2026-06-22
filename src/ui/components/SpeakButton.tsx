@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { isSpeechSupported, speak, RATE_NORMAL } from '../../speech/speech'
+import { isSpeechSupported, speak, cancelSpeech, RATE_NORMAL } from '../../speech/speech'
 import { t } from '../strings'
 
 interface SpeakButtonProps {
@@ -21,8 +21,8 @@ const sizes = {
 export default function SpeakButton({ text, label, size = 'md' }: SpeakButtonProps) {
   const [active, setActive] = useState(false)
 
-  // Reset the "speaking" state if the component unmounts mid-utterance.
-  useEffect(() => () => setActive(false), [])
+  // Reset the "speaking" state and cancel speech if the component unmounts mid-utterance.
+  useEffect(() => () => { cancelSpeech(); setActive(false) }, [])
 
   if (!isSpeechSupported()) return null
 

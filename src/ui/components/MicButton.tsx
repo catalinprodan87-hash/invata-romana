@@ -13,9 +13,12 @@ interface MicButtonProps {
 export default function MicButton({ onClip, label }: MicButtonProps) {
   const [recording, setRecording] = useState(false)
   const handleRef = useRef<RecorderHandle | null>(null)
+  const startingRef = useRef(false)
 
   async function handleClick() {
     if (!recording) {
+      if (startingRef.current) return
+      startingRef.current = true
       try {
         const handle = await startRecording()
         handleRef.current = handle
@@ -24,6 +27,8 @@ export default function MicButton({ onClip, label }: MicButtonProps) {
         // Mic denied or unavailable — stay idle, don't crash
         setRecording(false)
         handleRef.current = null
+      } finally {
+        startingRef.current = false
       }
     } else {
       const handle = handleRef.current
