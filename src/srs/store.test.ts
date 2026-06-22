@@ -1,8 +1,17 @@
 import 'fake-indexeddb/auto'
-import { describe, it, expect } from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
+import { clear, createStore } from 'idb-keyval'
 import type { SrsState } from './scheduler'
 import { getItemState, setItemState, allItemStates, getMeta, setMeta, defaultMeta } from './store'
 import type { Meta } from './store'
+
+const itemStoreT = createStore('ir-items', 'states')
+const metaStoreT = createStore('ir-meta', 'meta')
+
+beforeEach(async () => {
+  await clear(itemStoreT)
+  await clear(metaStoreT)
+})
 
 const sampleState: SrsState = { ease: 2.5, interval: 1, due: '2026-06-20', lapses: 0, seen: 1 }
 
