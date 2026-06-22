@@ -34,4 +34,7 @@ export const t = {
   done: 'Готово',
   sessionComplete: 'Заняття завершено!',
   xpEarned: 'Отримано досвіду: {count} XP',
+  easy: 'Легко',
+  correct: 'Правильно!',
+  incorrect: 'Неправильно',
 } as const
