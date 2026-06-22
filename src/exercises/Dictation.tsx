@@ -57,7 +57,7 @@ export default function Dictation({ exercise, item: itemProp, onDone }: Exercise
     ? result.tier === 'great'
       ? t.great
       : result.tier === 'close'
-        ? t.close
+        ? t.closeTier
         : t.tryAgain
     : ''
 

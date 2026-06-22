@@ -10,6 +10,7 @@ export const t = {
   tryAgain: 'Спробуйте ще раз',
   great: 'Чудово!',
   close: 'Закрити',
+  closeTier: 'Майже!',
   listen: 'Слухати',
   record: 'Записати',
   recording: 'Йде запис…',
@@ -41,4 +42,5 @@ export const t = {
   correctIs: 'Правильна відповідь:',
   tapToAnswer: 'Натисніть слово, щоб скласти відповідь',
   clear: 'Очистити',
+  typeAnswer: 'Введіть відповідь румунською',
 } as const

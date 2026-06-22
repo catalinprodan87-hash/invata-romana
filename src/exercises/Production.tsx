@@ -59,7 +59,7 @@ export default function Production({ exercise, onDone }: ExerciseProps<Productio
     ? result.tier === 'great'
       ? t.great
       : result.tier === 'close'
-        ? t.close
+        ? t.closeTier
         : t.tryAgain
     : ''
 
@@ -116,7 +116,7 @@ export default function Production({ exercise, onDone }: ExerciseProps<Productio
             <button
               type="button"
               onClick={clearBuilt}
-              className="self-start text-sm text-text-muted underline underline-offset-2"
+              className="self-start min-h-tap px-2 inline-flex items-center text-sm text-text-muted underline underline-offset-2"
             >
               {t.clear}
             </button>
@@ -130,7 +130,7 @@ export default function Production({ exercise, onDone }: ExerciseProps<Productio
           onChange={(e) => setTyped(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Enter' && result === null) handleCheck() }}
           disabled={result !== null}
-          placeholder={answer_ro}
+          placeholder={t.typeAnswer}
           className={[
             'w-full min-h-tap rounded-md border border-black/20 px-4 py-3 text-lg text-text',
             'bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary',
