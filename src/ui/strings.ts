@@ -37,4 +37,5 @@ export const t = {
   easy: 'Легко',
   correct: 'Правильно!',
   incorrect: 'Неправильно',
+  itemNotFound: 'Картку не знайдено',
 } as const

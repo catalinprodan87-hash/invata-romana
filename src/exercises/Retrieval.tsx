@@ -11,16 +11,19 @@ type RetrievalExercise = Extract<Exercise, { type: 'retrieval' }>
 
 export default function Retrieval({ exercise, item: itemProp, onDone }: ExerciseProps<RetrievalExercise>) {
   const [revealed, setRevealed] = useState(false)
+  const [done, setDone] = useState(false)
 
   const item = itemProp ?? getItemById(exercise.itemId)
 
   if (!item) {
     return (
-      <div className="text-text-muted text-center p-6">Item not found: {exercise.itemId}</div>
+      <div className="text-text-muted text-center p-6">{t.itemNotFound}: {exercise.itemId}</div>
     )
   }
 
   function handleGrade(grade: Grade) {
+    if (done) return
+    setDone(true)
     onDone(grade)
   }
 
@@ -51,6 +54,7 @@ export default function Retrieval({ exercise, item: itemProp, onDone }: Exercise
             <Button
               variant="secondary"
               onClick={() => handleGrade('again')}
+              disabled={done}
               className="w-full text-sm"
             >
               {t.again}
@@ -58,6 +62,7 @@ export default function Retrieval({ exercise, item: itemProp, onDone }: Exercise
             <Button
               variant="primary"
               onClick={() => handleGrade('good')}
+              disabled={done}
               className="w-full text-sm"
             >
               {t.gotIt}
@@ -65,6 +70,7 @@ export default function Retrieval({ exercise, item: itemProp, onDone }: Exercise
             <Button
               variant="secondary"
               onClick={() => handleGrade('easy')}
+              disabled={done}
               className="w-full text-sm text-green-700"
             >
               {t.easy}

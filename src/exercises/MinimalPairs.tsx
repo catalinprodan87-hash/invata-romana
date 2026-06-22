@@ -26,7 +26,7 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
   if (!item || !distractor) {
     return (
       <div className="text-text-muted text-center p-6">
-        Item not found: {!item ? exercise.itemId : exercise.distractorId}
+        {t.itemNotFound}: {!item ? exercise.itemId : exercise.distractorId}
       </div>
     )
   }
