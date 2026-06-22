@@ -13,7 +13,7 @@ export type TextSize = 'normal' | 'large'
 const STORAGE_KEY_TEXT_SIZE = 'ir.textSize'
 const STORAGE_KEY_DAILY_GOAL = 'ir.dailyGoal'
 const DEFAULT_TEXT_SIZE: TextSize = 'normal'
-const DEFAULT_DAILY_GOAL = 1
+const DEFAULT_DAILY_GOAL = 10
 
 function isTextSize(value: unknown): value is TextSize {
   return value === 'normal' || value === 'large'
@@ -47,6 +47,12 @@ function getInitialDailyGoal(): number {
     if (!isNaN(parsed) && parsed > 0) return parsed
   }
   return DEFAULT_DAILY_GOAL
+}
+
+// Apply the saved text size at module load (before first paint) to avoid a
+// flash of the wrong size for returning large-text users.
+if (typeof document !== 'undefined') {
+  document.documentElement.dataset.textSize = getInitialTextSize()
 }
 
 interface SettingsContextValue {

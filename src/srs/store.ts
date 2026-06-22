@@ -1,4 +1,4 @@
-import { createStore, get, set, entries } from 'idb-keyval'
+import { clear, createStore, get, set, entries } from 'idb-keyval'
 import type { SrsState } from './scheduler'
 
 const itemStore = createStore('ir-items', 'states')
@@ -30,3 +30,9 @@ export async function getMeta(): Promise<Meta> {
 }
 
 export const setMeta = (m: Meta) => set('meta', m, metaStore)
+
+/** Wipe all SRS item states and progress meta (used by Settings → reset). */
+export async function resetProgress(): Promise<void> {
+  await clear(itemStore)
+  await clear(metaStore)
+}
