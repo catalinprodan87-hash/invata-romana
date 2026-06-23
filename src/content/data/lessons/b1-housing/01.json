@@ -1,0 +1,82 @@
+{
+  "id": "b1-housing-01",
+  "level": "B1",
+  "unit_uk": "Житло та оренда",
+  "title_uk": "Шукаю житло",
+  "goal_uk": "Сказати, що ви шукаєте житло: «Caut un apartament», уточнити кількість кімнат, спитати про орендну плату на місяць і чи з меблями.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua. Caut un apartament.", "uk": "Добрий день. Я шукаю квартиру." },
+    { "speaker": "Agent", "ro": "Bună ziua. Cu o cameră sau cu două camere?", "uk": "Добрий день. З однією кімнатою чи з двома кімнатами?" },
+    { "speaker": "Olena", "ro": "Cu două camere, vă rog. Cât costă chiria?", "uk": "З двома кімнатами, будь ласка. Скільки коштує орендна плата?" },
+    { "speaker": "Agent", "ro": "Chiria este o mie de lei pe lună.", "uk": "Орендна плата — тисяча леїв на місяць." },
+    { "speaker": "Olena", "ro": "Apartamentul este mobilat?", "uk": "Квартира з меблями?" },
+    { "speaker": "Agent", "ro": "Da, este mobilat.", "uk": "Так, з меблями." },
+    { "speaker": "Olena", "ro": "Bine. Mulțumesc!", "uk": "Добре. Дякую!" },
+    { "speaker": "Agent", "ro": "Cu plăcere.", "uk": "Будь ласка." }
+  ],
+  "newItemIds": [
+    "caut",
+    "apartament",
+    "camera",
+    "doua-camere",
+    "chiria",
+    "pe-luna",
+    "mobilat",
+    "cu",
+    "o-mie",
+    "de",
+    "este",
+    "sau"
+  ],
+  "grammarNotes_uk": [
+    "Щоб сказати, що ви щось шукаєте, кажуть «Caut + іменник»: «Caut un apartament» (шукаю квартиру), «Caut o cameră» (шукаю кімнату). Дуже просто й корисно під час пошуку житла.",
+    "Орендну плату називають «chiria», а «на місяць» — «pe lună»: «Chiria este o mie de lei pe lună» (орендна плата тисяча леїв на місяць). Запитати ціну можна звичним «Cât costă chiria?»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "apartament"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "caut"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "camera",
+      "distractorId": "chiria"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати «я шукаю квартиру»?",
+      "options_uk": ["Caut un apartament.", "Cât costă chiria?", "Apartamentul este mobilat?"],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Агент каже «o mie de lei pe lună». Про що йдеться?",
+      "options_uk": ["Про кількість кімнат", "Про орендну плату за місяць", "Про поверх"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Запитайте, чи квартира з меблями.",
+      "answer_ro": "Apartamentul este mobilat?",
+      "wordBank": ["Apartamentul", "este", "mobilat"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зателефонуйте за оголошенням про оренду або зайдіть до агенції й скажіть, яке житло шукаєте — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Caut un apartament cu două camere.", "uk": "Добрий день. Я шукаю квартиру з двома кімнатами." },
+      { "speaker": "Ви", "ro": "Cât costă chiria pe lună?", "uk": "Скільки коштує орендна плата на місяць?" },
+      { "speaker": "Ви", "ro": "Apartamentul este mobilat? Mulțumesc!", "uk": "Квартира з меблями? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Почніть із «Caut un apartament» або «Caut o cameră».",
+      "Уточніть розмір: «cu o cameră» чи «cu două camere».",
+      "Спитайте ціну: «Cât costă chiria pe lună?».",
+      "Перевірте меблі: «Apartamentul este mobilat?»."
+    ]
+  }
+}

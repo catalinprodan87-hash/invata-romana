@@ -1,0 +1,79 @@
+{
+  "id": "b1-housing-02",
+  "level": "B1",
+  "unit_uk": "Житло та оренда",
+  "title_uk": "Огляд квартири",
+  "goal_uk": "Попросити показати квартиру: «Pot să văd apartamentul?», назвати кімнати (кухня, ванна, спальня), спитати про опалення, чи вільна квартира, і підписати договір.",
+  "dialogue": [
+    { "speaker": "Proprietar", "ro": "Bună ziua. Apartamentul este liber.", "uk": "Добрий день. Квартира вільна." },
+    { "speaker": "Olena", "ro": "Bună ziua. Pot să văd apartamentul?", "uk": "Добрий день. Можна подивитися квартиру?" },
+    { "speaker": "Proprietar", "ro": "Da. Aici este bucătăria, aici este baia.", "uk": "Так. Ось кухня, ось ванна кімната." },
+    { "speaker": "Olena", "ro": "Unde este dormitorul?", "uk": "Де спальня?" },
+    { "speaker": "Proprietar", "ro": "Aici. Apartamentul are încălzire.", "uk": "Тут. У квартирі є опалення." },
+    { "speaker": "Olena", "ro": "Bine. Apartamentul este liber acum?", "uk": "Добре. Квартира вільна зараз?" },
+    { "speaker": "Proprietar", "ro": "Da. Semnați contractul aici, vă rog.", "uk": "Так. Підпишіть договір тут, будь ласка." },
+    { "speaker": "Olena", "ro": "Am înțeles. Mulțumesc!", "uk": "Зрозуміла. Дякую!" }
+  ],
+  "newItemIds": [
+    "pot-sa-vad",
+    "bucataria",
+    "baia",
+    "dormitorul",
+    "incalzire",
+    "liber",
+    "contractul",
+    "are",
+    "acum"
+  ],
+  "grammarNotes_uk": [
+    "Щоб попросити показати квартиру, кажуть «Pot să văd apartamentul?» («Можна подивитися квартиру?»). Це знайома конструкція «Pot să + дієслово» («можна / можу + щось зробити»), як «Pot să plătesc?».",
+    "Кімнати в квартирі: «bucătăria» (кухня), «baia» (ванна), «dormitorul» (спальня). Запитати, чи вільна квартира — «Apartamentul este liber?». Якщо все добре — «Semnați contractul» (підпишіть договір)."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "contractul"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "pot-sa-vad"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "baia",
+      "distractorId": "bucataria"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як попросити показати квартиру?",
+      "options_uk": ["Pot să văd apartamentul?", "Cât costă chiria?", "Apartamentul este liber?"],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Власник каже «Apartamentul are încălzire». Про що це?",
+      "options_uk": ["Про опалення", "Про кухню", "Про орендну плату"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Запитайте, чи вільна квартира.",
+      "answer_ro": "Apartamentul este liber?",
+      "wordBank": ["Apartamentul", "este", "liber"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Домовтеся про перегляд квартири: попросіть показати її, огляньте кімнати й підпишіть договір — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Pot să văd apartamentul?", "uk": "Добрий день. Можна подивитися квартиру?" },
+      { "speaker": "Ви", "ro": "Unde este bucătăria? Apartamentul are încălzire?", "uk": "Де кухня? У квартирі є опалення?" },
+      { "speaker": "Ви", "ro": "Apartamentul este liber? Semnez contractul aici? Mulțumesc!", "uk": "Квартира вільна? Я підписую договір тут? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Попросіть показати: «Pot să văd apartamentul?».",
+      "Огляньте кімнати: «bucătăria», «baia», «dormitorul».",
+      "Спитайте про опалення: «Apartamentul are încălzire?».",
+      "Перед підписанням уточніть «Apartamentul este liber?» і «Semnez contractul aici?»."
+    ]
+  }
+}

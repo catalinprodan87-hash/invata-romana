@@ -1,0 +1,77 @@
+{
+  "id": "b1-housing-03",
+  "level": "B1",
+  "unit_uk": "Житло та оренда",
+  "title_uk": "Проблема в квартирі",
+  "goal_uk": "Повідомити власнику про несправність: «Apa caldă nu funcționează», «Frigiderul e stricat», і попросити «Puteți repara?».",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua. Am o problemă.", "uk": "Добрий день. У мене проблема." },
+    { "speaker": "Proprietar", "ro": "Bună ziua. Ce problemă aveți?", "uk": "Добрий день. Яка у вас проблема?" },
+    { "speaker": "Olena", "ro": "Apa caldă nu funcționează.", "uk": "Гаряча вода не працює." },
+    { "speaker": "Proprietar", "ro": "Am înțeles. Și frigiderul?", "uk": "Зрозуміло. А холодильник?" },
+    { "speaker": "Olena", "ro": "Frigiderul e stricat. Puteți repara?", "uk": "Холодильник зламаний. Можете полагодити?" },
+    { "speaker": "Proprietar", "ro": "Da. Mâine, vă rog.", "uk": "Так. Завтра, будь ласка." },
+    { "speaker": "Olena", "ro": "Mulțumesc mult!", "uk": "Дуже дякую!" },
+    { "speaker": "Proprietar", "ro": "Cu plăcere.", "uk": "Будь ласка." }
+  ],
+  "newItemIds": [
+    "proprietarul",
+    "apa-calda",
+    "nu-functioneaza",
+    "e-stricat",
+    "frigiderul",
+    "puteti-repara",
+    "si"
+  ],
+  "grammarNotes_uk": [
+    "Щоб сказати, що щось не працює, кажуть «… nu funcționează»: «Apa caldă nu funcționează» (гаряча вода не працює). Якщо річ зламана — «… e stricat»: «Frigiderul e stricat» (холодильник зламаний).",
+    "Попросити полагодити можна ввічливо: «Puteți repara?» («Можете полагодити?»). Це та сама форма на «Ви», що й «Puteți repeta?». Власника житла звуть «proprietarul»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "frigiderul"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "puteti-repara"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "nu-functioneaza",
+      "distractorId": "e-stricat"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати, що гаряча вода не працює?",
+      "options_uk": ["Apa caldă nu funcționează.", "Frigiderul e stricat.", "Puteți repara?"],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Ви кажете «Puteți repara?». Що ви просите?",
+      "options_uk": ["Показати квартиру", "Полагодити", "Підписати договір"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Скажіть, що холодильник зламаний.",
+      "answer_ro": "Frigiderul e stricat.",
+      "wordBank": ["Frigiderul", "e", "stricat"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зателефонуйте власнику житла й повідомте про несправність — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Am o problemă.", "uk": "Добрий день. У мене проблема." },
+      { "speaker": "Ви", "ro": "Apa caldă nu funcționează. Frigiderul e stricat.", "uk": "Гаряча вода не працює. Холодильник зламаний." },
+      { "speaker": "Ви", "ro": "Puteți repara? Mulțumesc!", "uk": "Можете полагодити? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Почніть із «Am o problemă».",
+      "Назвіть несправність: «Apa caldă nu funcționează» або «Frigiderul e stricat».",
+      "Попросіть полагодити: «Puteți repara?».",
+      "Подякуйте: «Mulțumesc mult!»."
+    ]
+  }
+}

@@ -27,6 +27,15 @@
         "b1-appointments-02",
         "b1-appointments-03"
       ]
+    },
+    {
+      "id": "b1-housing",
+      "unit_uk": "Житло та оренда",
+      "lessonIds": [
+        "b1-housing-01",
+        "b1-housing-02",
+        "b1-housing-03"
+      ]
     }
   ]
 }

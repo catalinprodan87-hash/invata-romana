@@ -11,6 +11,9 @@ import errands03 from './lessons/a2-errands/03.json'
 import appointments01 from './lessons/b1-appointments/01.json'
 import appointments02 from './lessons/b1-appointments/02.json'
 import appointments03 from './lessons/b1-appointments/03.json'
+import housing01 from './lessons/b1-housing/01.json'
+import housing02 from './lessons/b1-housing/02.json'
+import housing03 from './lessons/b1-housing/03.json'
 
 const lessons = [
   lesson01,
@@ -23,6 +26,9 @@ const lessons = [
   appointments01,
   appointments02,
   appointments03,
+  housing01,
+  housing02,
+  housing03,
 ]
 
 test('item bank passes validation', () => {
