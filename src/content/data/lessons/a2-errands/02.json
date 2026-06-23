@@ -1,0 +1,76 @@
+{
+  "id": "a2-errands-02",
+  "level": "A2",
+  "unit_uk": "Щоденні справи",
+  "title_uk": "Оплата на касі",
+  "goal_uk": "Заплатити карткою або готівкою, попросити чек і сказати, що щось задорого.",
+  "dialogue": [
+    { "speaker": "Vânzător", "ro": "Cât face în total? Zece lei.", "uk": "Скільки разом? Десять леїв." },
+    { "speaker": "Olena", "ro": "Pot să plătesc cu cardul?", "uk": "Можна заплатити карткою?" },
+    { "speaker": "Vânzător", "ro": "Da, sigur. Cu cardul?", "uk": "Так, звісно. Карткою?" },
+    { "speaker": "Olena", "ro": "Da, cu cardul. Și vreau bonul, vă rog.", "uk": "Так, карткою. І я хочу чек, будь ласка." },
+    { "speaker": "Vânzător", "ro": "Bine. Bonul.", "uk": "Добре. Ось чек." },
+    { "speaker": "Olena", "ro": "Mulțumesc! La revedere!", "uk": "Дякую! До побачення!" }
+  ],
+  "newItemIds": [
+    "platesc",
+    "pot-sa-platesc",
+    "cu-cardul",
+    "numerar",
+    "rest",
+    "bon",
+    "prea-scump",
+    "ieftin"
+  ],
+  "grammarNotes_uk": [
+    "Щоб уточнити спосіб оплати, кажуть «cu cardul» (карткою) або «cu numerar» (готівкою). Запитати дозвіл — «Pot să plătesc...?» («Можна заплатити...?»).",
+    "Якщо ціна зависока, скажіть «E prea scump» («це задорого»). «Rest» — це решта (здача), а «bon» — касовий чек: «Vreau bonul, vă rog»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "platesc"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "pot-sa-platesc"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "platesc",
+      "distractorId": "pot-sa-platesc"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Що означає «cu numerar»?",
+      "options_uk": ["Карткою", "Готівкою", "Чеком"],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати, що щось занадто дорого?",
+      "options_uk": ["E prea scump.", "Vreau bonul.", "Cu cardul, vă rog."],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Запитайте, чи можна заплатити карткою.",
+      "answer_ro": "Pot să plătesc cu cardul?",
+      "wordBank": ["Pot", "să", "plătesc", "cu", "cardul"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "На реальній касі заплатіть і попросіть чек румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Pot să plătesc cu cardul?", "uk": "Можна заплатити карткою?" },
+      { "speaker": "Ви", "ro": "Cu cardul, vă rog. Și vreau bonul.", "uk": "Карткою, будь ласка. І я хочу чек." },
+      { "speaker": "Ви", "ro": "Mulțumesc! La revedere!", "uk": "Дякую! До побачення!" }
+    ],
+    "realWorld_uk": [
+      "На касі магазину скажіть, як платитимете: «Cu cardul» або «Cu numerar».",
+      "Якщо треба запитати дозвіл: «Pot să plătesc cu cardul?».",
+      "Попросіть чек: «Vreau bonul, vă rog». Якщо платите готівкою — не забудьте про «rest» (здачу).",
+      "Завершіть «Mulțumesc! La revedere!»."
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "a2-errands-03",
+  "level": "A2",
+  "unit_uk": "Щоденні справи",
+  "title_uk": "В аптеці",
+  "goal_uk": "Сказати, що болить, попросити ліки й зрозуміти питання про рецепт.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua! Mă doare capul.", "uk": "Добрий день! У мене болить голова." },
+    { "speaker": "Farmacist", "ro": "Aveți febră?", "uk": "У вас є температура?" },
+    { "speaker": "Olena", "ro": "Da, puțin. Am nevoie de un medicament.", "uk": "Так, трохи. Мені потрібні ліки." },
+    { "speaker": "Farmacist", "ro": "Aveți o rețetă?", "uk": "У вас є рецепт?" },
+    { "speaker": "Olena", "ro": "Nu. Aveți comprimate?", "uk": "Ні. У вас є таблетки?" },
+    { "speaker": "Farmacist", "ro": "Da, avem.", "uk": "Так, є." },
+    { "speaker": "Olena", "ro": "Cât costă? Plătesc cu cardul.", "uk": "Скільки коштує? Я плачу карткою." },
+    { "speaker": "Farmacist", "ro": "Zece lei. Mulțumesc!", "uk": "Десять леїв. Дякую!" }
+  ],
+  "newItemIds": [
+    "ma-doare",
+    "capul",
+    "gatul",
+    "stomacul",
+    "am-nevoie-de",
+    "reteta",
+    "medicament",
+    "comprimate",
+    "febra",
+    "doctor"
+  ],
+  "grammarNotes_uk": [
+    "Щоб сказати, що болить, кажуть «Mă doare + частина тіла»: «Mă doare capul» (болить голова), «Mă doare gâtul» (болить горло), «Mă doare stomacul» (болить живіт).",
+    "«Am nevoie de + щось» означає «мені потрібно/потрібен...»: «Am nevoie de un medicament» (мені потрібні ліки), «Am nevoie de un doctor» (мені потрібен лікар)."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "ma-doare"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "am-nevoie-de"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "capul",
+      "distractorId": "gatul"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати «у мене болить голова»?",
+      "options_uk": ["Mă doare capul.", "Mă doare stomacul.", "Am nevoie de un doctor."],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Фармацевт питає «Aveți o rețetă?». Про що йдеться?",
+      "options_uk": ["Чи маєте рецепт", "Чи болить горло", "Чи потрібні таблетки"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Скажіть, що вам потрібні ліки.",
+      "answer_ro": "Am nevoie de un medicament.",
+      "wordBank": ["Am", "nevoie", "de", "un", "medicament"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зайдіть в аптеку й опишіть, що вас турбує, румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua! Mă doare capul.", "uk": "Добрий день! У мене болить голова." },
+      { "speaker": "Ви", "ro": "Am nevoie de un medicament. Aveți comprimate?", "uk": "Мені потрібні ліки. У вас є таблетки?" },
+      { "speaker": "Ви", "ro": "Cât costă? Mulțumesc!", "uk": "Скільки коштує? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Згадайте, що вас турбує: «Mă doare capul / gâtul / stomacul».",
+      "Скажіть фармацевту, що болить, і додайте «Am nevoie de un medicament».",
+      "Запитайте «Aveți comprimate?» і будьте готові почути «Aveți o rețetă?».",
+      "Запитайте ціну «Cât costă?» і подякуйте «Mulțumesc!»."
+    ]
+  }
+}

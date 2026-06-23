@@ -1,0 +1,80 @@
+{
+  "id": "a2-errands-01",
+  "level": "A2",
+  "unit_uk": "Щоденні справи",
+  "title_uk": "На ринку та покупки",
+  "goal_uk": "Купити продукти на ринку: попросити кілограм, запитати ціну й показати «оце».",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua! Cât costă merele?", "uk": "Добрий день! Скільки коштують яблука?" },
+    { "speaker": "Vânzător", "ro": "Cinci lei kilogramul. Sunt proaspete.", "uk": "П'ять леїв за кілограм. Вони свіжі." },
+    { "speaker": "Olena", "ro": "Vreau un kilogram de mere, vă rog.", "uk": "Я хочу кілограм яблук, будь ласка." },
+    { "speaker": "Vânzător", "ro": "Altceva? Avem roșii proaspete.", "uk": "Щось іще? У нас свіжі помідори." },
+    { "speaker": "Olena", "ro": "O jumătate de kilogram de roșii. Și asta, vă rog.", "uk": "Пів кілограма помідорів. І оце, будь ласка." },
+    { "speaker": "Vânzător", "ro": "Mai mult?", "uk": "Більше?" },
+    { "speaker": "Olena", "ro": "Nu, ajunge. Mulțumesc!", "uk": "Ні, досить. Дякую!" }
+  ],
+  "newItemIds": [
+    "piata",
+    "kilogram",
+    "jumatate-kilogram",
+    "mere",
+    "rosii",
+    "cartofi",
+    "asta",
+    "cumpar",
+    "proaspat",
+    "mai-mult",
+    "ajunge"
+  ],
+  "grammarNotes_uk": [
+    "Щоб назвати кількість, кажуть «un kilogram de + продукт»: «un kilogram de mere» (кілограм яблук), «o jumătate de kilogram de roșii» (пів кілограма помідорів). Маленьке «de» — як українське «...з/-а».",
+    "«Asta» означає «оце» — зручно, коли не знаєте слова: просто покажіть на товар і скажіть «Vreau asta, vă rog». «Ajunge» значить «досить», а «mai mult» — «більше»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "kilogram"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "jumatate-kilogram"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "mere",
+      "distractorId": "rosii"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як попросити кілограм яблук?",
+      "options_uk": ["Vreau un kilogram de mere, vă rog.", "Cât costă merele?", "Asta, vă rog."],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Продавець питає «Mai mult?». Ви наїлися кількістю. Що відповісти?",
+      "options_uk": ["Da, mai mult.", "Nu, ajunge. Mulțumesc!", "Cât costă?"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Попросіть кілограм яблук (ввічливо).",
+      "answer_ro": "Vreau un kilogram de mere, vă rog.",
+      "wordBank": ["Vreau", "un", "kilogram", "de", "mere", "vă", "rog"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Підіть на ринок чи в магазин і купіть один продукт за вагою, говорячи румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua! Cât costă merele?", "uk": "Добрий день! Скільки коштують яблука?" },
+      { "speaker": "Ви", "ro": "Vreau un kilogram de mere, vă rog.", "uk": "Я хочу кілограм яблук, будь ласка." },
+      { "speaker": "Ви", "ro": "Ajunge. Mulțumesc!", "uk": "Досить. Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Оберіть продукт, який продають на вагу (яблука, помідори, картопля).",
+      "Запитайте ціну: «Cât costă...?» і послухайте відповідь.",
+      "Попросіть «un kilogram de...» або «o jumătate de kilogram de...». Якщо не знаєте слова — покажіть і скажіть «Asta, vă rog».",
+      "Коли вистачить, скажіть «Ajunge, mulțumesc!»."
+    ]
+  }
+}

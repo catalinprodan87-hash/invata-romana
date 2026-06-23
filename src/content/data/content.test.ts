@@ -5,17 +5,20 @@ import lesson01 from './lessons/a1-survival/01.json'
 import lesson02 from './lessons/a1-survival/02.json'
 import lesson03 from './lessons/a1-survival/03.json'
 import lesson04 from './lessons/a1-survival/04.json'
+import errands01 from './lessons/a2-errands/01.json'
+import errands02 from './lessons/a2-errands/02.json'
+import errands03 from './lessons/a2-errands/03.json'
 
-const lessons = [lesson01, lesson02, lesson03, lesson04]
+const lessons = [lesson01, lesson02, lesson03, lesson04, errands01, errands02, errands03]
 
 test('item bank passes validation', () => {
   expect(() => validateItemBank(itemBank)).not.toThrow()
 })
 
-test('item bank has ~50 A1 items', () => {
+test('item bank has A1/A2 items with pronunciations', () => {
   expect(itemBank.items.length).toBeGreaterThanOrEqual(50)
   for (const item of itemBank.items) {
-    expect(item.cefr).toBe('A1')
+    expect(['A1', 'A2']).toContain(item.cefr)
     expect(item.pron_uk.trim()).not.toBe('')
   }
 })
@@ -30,12 +33,13 @@ test('every lesson passes validation against the item bank', () => {
 test('every lesson required by the course index exists and is valid', () => {
   const ids = new Set(itemBank.items.map((i) => i.id))
   const byId = new Map(lessons.map((l) => [l.id, l]))
-  const unit = courseIndex.units.find((u) => u.id === 'a1-survival')
-  expect(unit).toBeDefined()
-  for (const lessonId of unit!.lessonIds) {
-    const lesson = byId.get(lessonId)
-    expect(lesson, `missing lesson ${lessonId}`).toBeDefined()
-    expect(() => validateLesson(lesson, ids)).not.toThrow()
+  expect(courseIndex.units.length).toBeGreaterThanOrEqual(1)
+  for (const unit of courseIndex.units) {
+    for (const lessonId of unit.lessonIds) {
+      const lesson = byId.get(lessonId)
+      expect(lesson, `missing lesson ${lessonId}`).toBeDefined()
+      expect(() => validateLesson(lesson, ids)).not.toThrow()
+    }
   }
 })
 

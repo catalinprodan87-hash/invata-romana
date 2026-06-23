@@ -9,6 +9,15 @@
         "a1-survival-03",
         "a1-survival-04"
       ]
+    },
+    {
+      "id": "a2-errands",
+      "unit_uk": "Щоденні справи",
+      "lessonIds": [
+        "a2-errands-01",
+        "a2-errands-02",
+        "a2-errands-03"
+      ]
     }
   ]
 }
