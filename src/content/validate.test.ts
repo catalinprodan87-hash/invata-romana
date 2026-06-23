@@ -40,3 +40,14 @@ test('lesson missing unit_uk is rejected', () => {
   }
   expect(() => validateLesson(base as any, new Set())).toThrow(/unit_uk/)
 })
+
+test('lesson with mission missing lines is rejected (would crash at completion)', () => {
+  const base = {
+    id: 'l1', level: 'A1', unit_uk: 'U', title_uk: 'T', goal_uk: 'G',
+    dialogue: [{ speaker: 'A', ro: 'Bună', uk: 'Привіт' }],
+    newItemIds: [], grammarNotes_uk: [],
+    exercises: [{ type: 'production', prompt_uk: 'p', answer_ro: 'Bună' }],
+    mission: { prompt_uk: 'p', realWorld_uk: ['x'] }, // no `lines`
+  }
+  expect(() => validateLesson(base as any, new Set())).toThrow(/mission\.lines/)
+})

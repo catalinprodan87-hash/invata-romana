@@ -12,6 +12,7 @@ type OptionState = 'idle' | 'correct' | 'wrong' | 'reveal'
 
 export default function MinimalPairs({ exercise, onDone }: ExerciseProps<MinimalPairsExercise>) {
   const [selected, setSelected] = useState<string | null>(null)
+  const [submitted, setSubmitted] = useState(false)
   const answered = selected !== null
 
   const item = getItemById(exercise.itemId)
@@ -91,7 +92,12 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
       {/* Continue only after the learner has seen the result */}
       {answered && (
         <Button
-          onClick={() => onDone(selected === item!.ro ? 'good' : 'again')}
+          disabled={submitted}
+          onClick={() => {
+            if (submitted) return
+            setSubmitted(true)
+            onDone(selected === item!.ro ? 'good' : 'again')
+          }}
           className="w-full"
         >
           {t.next}

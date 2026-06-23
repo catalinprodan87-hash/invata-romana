@@ -10,11 +10,18 @@ type OptionState = 'idle' | 'correct' | 'wrong' | 'reveal'
 
 export default function Comprehension({ exercise, onDone }: ExerciseProps<ComprehensionExercise>) {
   const [selected, setSelected] = useState<number | null>(null)
+  const [submitted, setSubmitted] = useState(false)
   const answered = selected !== null
 
   function handleSelect(index: number) {
     if (answered) return
     setSelected(index)
+  }
+
+  function handleContinue() {
+    if (submitted) return
+    setSubmitted(true)
+    onDone(selected === exercise.answerIndex ? 'good' : 'again')
   }
 
   function stateFor(index: number): OptionState {
@@ -67,10 +74,7 @@ export default function Comprehension({ exercise, onDone }: ExerciseProps<Compre
 
       {/* Continue only after the learner has seen the result */}
       {answered && (
-        <Button
-          onClick={() => onDone(selected === exercise.answerIndex ? 'good' : 'again')}
-          className="w-full"
-        >
+        <Button disabled={submitted} onClick={handleContinue} className="w-full">
           {t.next}
         </Button>
       )}

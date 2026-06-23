@@ -63,4 +63,12 @@ export function validateLesson(data: unknown, ids: Set<string>): asserts data is
     fail(`lesson ${l.id}.mission.realWorld_uk empty`)
   }
   str(l.mission.prompt_uk, 'lesson.mission.prompt_uk')
+  // mission.lines is required and rendered at the end of the session; an empty
+  // or malformed array would otherwise crash MissionRehearsal at completion.
+  if (!Array.isArray(l.mission.lines)) fail(`lesson ${l.id}.mission.lines must be an array`)
+  l.mission.lines.forEach((line, i) => {
+    str(line.speaker, `lesson ${l.id} mission.lines[${i}].speaker`)
+    str(line.ro, `lesson ${l.id} mission.lines[${i}].ro`)
+    str(line.uk, `lesson ${l.id} mission.lines[${i}].uk`)
+  })
 }

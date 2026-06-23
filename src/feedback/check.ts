@@ -1,3 +1,5 @@
+import { t } from '../ui/strings'
+
 export function normalize(input: string): string {
   return input.toLowerCase().normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
@@ -38,7 +40,8 @@ const DIACRITICS = 'ăâîșț'
 // that, so this just lists the letters to watch.
 function diacriticHint(expected: string): string | undefined {
   const offenders = [...expected].filter((ch) => DIACRITICS.includes(ch.toLowerCase()))
-  return offenders.length ? `Зверніть увагу на «${[...new Set(offenders)].join(' ')}»` : undefined
+  if (!offenders.length) return undefined
+  return t.diacriticHint.replace('{letters}', [...new Set(offenders)].join(' '))
 }
 
 export function gradeText(expected: string, got: string): { tier: Tier; correct: boolean; diacriticHint?: string } {

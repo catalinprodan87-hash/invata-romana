@@ -141,8 +141,11 @@ export default function SessionOrchestrator() {
   // ---- completion ----
   async function finishLesson() {
     if (!lesson) return
-    // Seed SRS for every new item so it enters the review rotation, even ones
-    // no exercise happened to target.
+    // Seed SRS for every new item so it enters the review rotation. Items a
+    // practice exercise already graded keep that practice-derived state (so a
+    // struggled-with item stays due sooner); items no exercise targeted enter
+    // at the 'good' baseline (due tomorrow). The `!existing` guard preserves
+    // the practiced state and only seeds the untouched ones.
     for (const id of lesson.newItemIds) {
       const existing = await getItemState(id)
       if (!existing) await setItemState(id, schedule(initialState(today()), 'good', today()))

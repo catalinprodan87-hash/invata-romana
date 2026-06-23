@@ -63,4 +63,5 @@ export const t = {
   aboutBody: 'Застосунок працює офлайн і зберігає прогрес лише на вашому пристрої.',
   dailyGoalItems: 'Слів на день: {count}',
   allDoneToday: 'Ціль на сьогодні виконано 🎉',
+  diacriticHint: 'Зверніть увагу на «{letters}»',
 } as const
