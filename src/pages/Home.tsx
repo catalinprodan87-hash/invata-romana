@@ -151,6 +151,20 @@ export default function Home() {
             <p className="text-sm text-text-muted">{t.comeBackLater}</p>
           </div>
         )}
+
+        {/* Optional game — quick listening/meaning drill over seen vocabulary */}
+        <button
+          type="button"
+          onClick={() => navigate('/game')}
+          className="flex items-center gap-3 rounded-lg bg-surface p-4 text-left ring-1 ring-black/5 transition-colors hover:bg-primary/5"
+        >
+          <span aria-hidden="true" className="text-3xl">🎮</span>
+          <div className="flex-1">
+            <p className="text-base font-bold text-text">{t.gameTitle}</p>
+            <p className="text-sm text-text-muted">{t.gameTagline}</p>
+          </div>
+          <span aria-hidden="true" className="text-text-muted">›</span>
+        </button>
       </main>
     </div>
   )
