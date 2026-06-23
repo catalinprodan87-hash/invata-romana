@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useSettings, type TextSize } from '../ui/settings'
+import { useSettings, type TextSize, type Theme } from '../ui/settings'
 import { resetProgress } from '../srs/store'
 import Button from '../ui/components/Button'
 import { t } from '../ui/strings'
@@ -26,7 +26,7 @@ function Segmented<T extends string | number>({
             onClick={() => onChange(o.value)}
             className={[
               'min-h-tap flex-1 rounded-md px-3 py-2 font-semibold transition-colors',
-              active ? 'bg-primary text-onPrimary' : 'bg-bg text-text ring-1 ring-white/15',
+              active ? 'bg-primary text-onPrimary' : 'bg-bg text-text ring-1 ring-hairline-strong',
             ].join(' ')}
           >
             {o.label}
@@ -39,7 +39,7 @@ function Segmented<T extends string | number>({
 
 export default function Settings() {
   const navigate = useNavigate()
-  const { textSize, setTextSize, dailyGoal, setDailyGoal } = useSettings()
+  const { textSize, setTextSize, dailyGoal, setDailyGoal, theme, setTheme } = useSettings()
 
   async function handleReset() {
     if (!window.confirm(t.resetConfirm)) return
@@ -62,7 +62,19 @@ export default function Settings() {
       </header>
 
       <main className="mx-auto flex max-w-screen-sm flex-col gap-4 px-4 pb-12 pt-4">
-        <section className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-hairline">
+          <p className="mb-2 text-base font-semibold text-text">{t.theme}</p>
+          <Segmented<Theme>
+            value={theme}
+            onChange={setTheme}
+            options={[
+              { value: 'dark', label: t.themeDark },
+              { value: 'light', label: t.themeLight },
+            ]}
+          />
+        </section>
+
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-hairline">
           <p className="mb-2 text-base font-semibold text-text">{t.textSize}</p>
           <Segmented<TextSize>
             value={textSize}
@@ -74,7 +86,7 @@ export default function Settings() {
           />
         </section>
 
-        <section className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-hairline">
           <p className="mb-2 text-base font-semibold text-text">{t.dailyGoal}</p>
           <Segmented<number>
             value={dailyGoal}
@@ -87,7 +99,7 @@ export default function Settings() {
           />
         </section>
 
-        <section className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-hairline">
           <p className="text-base font-semibold text-text">{t.about}</p>
           <p className="mt-1 text-sm text-text-muted">{t.aboutBody}</p>
         </section>

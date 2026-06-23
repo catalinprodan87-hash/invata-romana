@@ -89,7 +89,7 @@ export default function Home() {
 
       <main className="mx-auto flex max-w-screen-sm flex-col gap-4 px-4 pb-12 pt-4">
         {/* Daily goal + streak */}
-        <div className="flex items-center gap-4 rounded-lg bg-surface p-4 ring-1 ring-white/10">
+        <div className="flex items-center gap-4 rounded-lg bg-surface p-4 ring-1 ring-hairline">
           <ProgressRing
             value={ringValue}
             center={`${dash.dailyDone}/${dailyGoal}`}
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* Frequency backbone */}
-        <div className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
+        <div className="rounded-lg bg-surface p-4 ring-1 ring-hairline">
           <div className="flex items-baseline justify-between">
             <p className="text-sm font-semibold uppercase tracking-wide text-text-muted">
               {t.wordsKnownLabel}
@@ -124,7 +124,7 @@ export default function Home() {
 
         {/* Action */}
         {hasWork ? (
-          <div className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
+          <div className="rounded-lg bg-surface p-4 ring-1 ring-hairline">
             <div className="mb-3 flex gap-6">
               <div>
                 <p className="text-2xl font-bold text-primary">{dash.reviewsDue}</p>
@@ -145,7 +145,7 @@ export default function Home() {
             </Button>
           </div>
         ) : (
-          <div className="rounded-lg bg-surface p-6 text-center ring-1 ring-white/10">
+          <div className="rounded-lg bg-surface p-6 text-center ring-1 ring-hairline">
             <p className="text-4xl">🌿</p>
             <p className="mt-2 text-lg font-bold text-text">{t.allCaughtUp}</p>
             <p className="text-sm text-text-muted">{t.comeBackLater}</p>
@@ -156,7 +156,7 @@ export default function Home() {
         <button
           type="button"
           onClick={() => navigate('/drill')}
-          className="flex items-center gap-3 rounded-lg bg-surface p-4 text-left ring-1 ring-white/10 transition-colors hover:bg-primary/5"
+          className="flex items-center gap-3 rounded-lg bg-surface p-4 text-left ring-1 ring-hairline transition-colors hover:bg-primary/5"
         >
           <span aria-hidden="true" className="text-3xl">📚</span>
           <div className="flex-1">
@@ -170,7 +170,7 @@ export default function Home() {
         <button
           type="button"
           onClick={() => navigate('/game')}
-          className="flex items-center gap-3 rounded-lg bg-surface p-4 text-left ring-1 ring-white/10 transition-colors hover:bg-primary/5"
+          className="flex items-center gap-3 rounded-lg bg-surface p-4 text-left ring-1 ring-hairline transition-colors hover:bg-primary/5"
         >
           <span aria-hidden="true" className="text-3xl">🎮</span>
           <div className="flex-1">

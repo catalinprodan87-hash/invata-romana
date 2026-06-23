@@ -19,6 +19,9 @@
   --color-success-tint: #18301f;
   --color-warning-tint: #322611;
   --color-danger-tint: #341a1b;
+  /* Hairline borders/rings — token-driven so they invert with the theme. */
+  --color-border: rgba(255, 255, 255, 0.10);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -30,6 +33,29 @@
 
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
+}
+
+/* Light theme — opt-in via Settings (sets data-theme on <html>). Dark is the
+   default (:root above), so returning dark users get no flash. */
+html[data-theme='light'] {
+  --color-primary: #a8650a;        /* deep amber: readable on light AND as a fill */
+  --color-primary-dark: #7d4b06;
+  --color-on-primary: #ffffff;     /* white text on the amber fill */
+  --color-accent: #d98b14;
+  --color-bg: #faf7f1;             /* warm paper */
+  --color-surface: #ffffff;
+  --color-text: #211f1a;
+  --color-text-muted: #6b6a63;
+  --color-success: #1f9d57;
+  --color-warning: #b9760c;
+  --color-danger: #c93b34;
+  --color-success-tint: #e9f7ee;
+  --color-warning-tint: #fbf1da;
+  --color-danger-tint: #fdecea;
+  --color-border: rgba(0, 0, 0, 0.10);
+  --color-border-strong: rgba(0, 0, 0, 0.16);
+
+  color-scheme: light;
 }
 
 /* Large text-size preference (set on <html> by the Settings provider). */

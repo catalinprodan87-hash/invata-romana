@@ -34,7 +34,7 @@ function fmt(s: string, n: number): string {
 /** A thin progress bar for the warm-up and practice phases. */
 function Bar({ value }: { value: number }) {
   return (
-    <div className="h-2 w-full overflow-hidden rounded-full bg-surface ring-1 ring-white/10">
+    <div className="h-2 w-full overflow-hidden rounded-full bg-surface ring-1 ring-hairline">
       <div
         className="h-full rounded-full bg-primary transition-all"
         style={{ width: `${Math.round(value * 100)}%` }}
@@ -234,7 +234,7 @@ export default function SessionOrchestrator() {
               </h2>
               <div className="flex flex-col gap-2">
                 {lesson.dialogue.map((line, i) => (
-                  <div key={i} className="flex items-start gap-3 rounded-md bg-surface p-3 ring-1 ring-white/10">
+                  <div key={i} className="flex items-start gap-3 rounded-md bg-surface p-3 ring-1 ring-hairline">
                     <SpeakButton text={line.ro} size="md" label={t.playModel} />
                     <div className="min-w-0 flex-1">
                       <p className="text-xs font-semibold text-text-muted">{line.speaker}</p>
@@ -253,7 +253,7 @@ export default function SessionOrchestrator() {
                 </h2>
                 <ul className="flex flex-col gap-2">
                   {lesson.grammarNotes_uk.map((note, i) => (
-                    <li key={i} className="rounded-md bg-surface p-3 text-sm text-text ring-1 ring-white/10">
+                    <li key={i} className="rounded-md bg-surface p-3 text-sm text-text ring-1 ring-hairline">
                       {note}
                     </li>
                   ))}

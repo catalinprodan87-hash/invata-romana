@@ -83,7 +83,7 @@ export default function Production({ exercise, onDone }: ExerciseProps<Productio
           {/* Built sentence display */}
           <div
             className={[
-              'min-h-[3.5rem] rounded-md border border-white/20 bg-surface px-4 py-3 flex flex-wrap gap-2 items-center',
+              'min-h-[3.5rem] rounded-md border border-hairline-strong bg-surface px-4 py-3 flex flex-wrap gap-2 items-center',
               result !== null ? tierBg : '',
             ].join(' ')}
           >
@@ -111,7 +111,7 @@ export default function Production({ exercise, onDone }: ExerciseProps<Productio
                   key={idx}
                   type="button"
                   onClick={() => tapWord(word)}
-                  className="min-h-tap rounded-md bg-surface ring-1 ring-white/15 px-3 py-2 text-base font-medium text-text hover:bg-primary/10 active:scale-95 transition-colors"
+                  className="min-h-tap rounded-md bg-surface ring-1 ring-hairline-strong px-3 py-2 text-base font-medium text-text hover:bg-primary/10 active:scale-95 transition-colors"
                 >
                   {word}
                 </button>
@@ -140,7 +140,7 @@ export default function Production({ exercise, onDone }: ExerciseProps<Productio
           disabled={result !== null}
           placeholder={t.typeAnswer}
           className={[
-            'w-full min-h-tap rounded-md border border-white/20 px-4 py-3 text-lg text-text',
+            'w-full min-h-tap rounded-md border border-hairline-strong px-4 py-3 text-lg text-text',
             'bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary',
             'disabled:opacity-70',
             result !== null ? tierBg : '',

@@ -245,10 +245,10 @@ function Round({ round, streak, onAnswer, onNext, isLast }: RoundProps) {
   }
 
   const stateStyles: Record<OptionState, string> = {
-    idle: 'bg-surface text-text ring-1 ring-white/15',
+    idle: 'bg-surface text-text ring-1 ring-hairline-strong',
     correct: 'bg-success-tint text-success ring-2 ring-success',
     wrong: 'bg-danger-tint text-danger ring-2 ring-danger',
-    reveal: 'bg-surface text-text-muted ring-1 ring-white/15 opacity-60',
+    reveal: 'bg-surface text-text-muted ring-1 ring-hairline-strong opacity-60',
   }
 
   const timedOut = msLeft <= 0 && selected === null
@@ -256,7 +256,7 @@ function Round({ round, streak, onAnswer, onNext, isLast }: RoundProps) {
   return (
     <main className="mx-auto flex max-w-screen-sm flex-col gap-5 px-4 pb-12 pt-4">
       {/* Timer */}
-      <div className="h-2 w-full overflow-hidden rounded-full bg-surface ring-1 ring-white/10">
+      <div className="h-2 w-full overflow-hidden rounded-full bg-surface ring-1 ring-hairline">
         <div
           className={`h-full rounded-full transition-[width] duration-100 ease-linear ${
             msLeft / ROUND_MS < 0.3 ? 'bg-danger' : 'bg-primary'

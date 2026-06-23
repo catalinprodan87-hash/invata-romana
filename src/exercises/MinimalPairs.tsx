@@ -46,10 +46,10 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
   }
 
   const stateStyles: Record<OptionState, string> = {
-    idle: 'bg-surface text-text ring-1 ring-white/15',
+    idle: 'bg-surface text-text ring-1 ring-hairline-strong',
     correct: 'bg-success-tint text-success ring-2 ring-success',
     wrong: 'bg-danger-tint text-danger ring-2 ring-danger',
-    reveal: 'bg-surface text-text-muted ring-1 ring-white/15 opacity-60',
+    reveal: 'bg-surface text-text-muted ring-1 ring-hairline-strong opacity-60',
   }
 
   return (

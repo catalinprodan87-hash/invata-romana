@@ -23,6 +23,8 @@ export default {
         'success-tint': 'var(--color-success-tint)',
         'warning-tint': 'var(--color-warning-tint)',
         'danger-tint': 'var(--color-danger-tint)',
+        hairline: 'var(--color-border)',
+        'hairline-strong': 'var(--color-border-strong)',
       },
       borderRadius: {
         sm: 'var(--radius-sm)',

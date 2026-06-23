@@ -90,7 +90,7 @@ export default function Dictation({ exercise, item: itemProp, onDone }: Exercise
         disabled={result !== null}
         placeholder={t.typeWhatYouHear}
         className={[
-          'w-full min-h-tap rounded-md border border-white/20 px-4 py-3 text-lg text-text',
+          'w-full min-h-tap rounded-md border border-hairline-strong px-4 py-3 text-lg text-text',
           'bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary',
           'disabled:opacity-70',
           result !== null ? tierBg : '',

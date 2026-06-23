@@ -37,7 +37,7 @@ export default function MissionRehearsal({ mission, onDone }: MissionRehearsalPr
         {mission.lines.map((line, i) => (
           <div
             key={i}
-            className="flex items-start gap-3 rounded-md bg-surface p-4 ring-1 ring-white/10"
+            className="flex items-start gap-3 rounded-md bg-surface p-4 ring-1 ring-hairline"
           >
             <SpeakButton text={line.ro} size="md" label={t.playModel} />
             <div className="flex-1 min-w-0">
@@ -58,7 +58,7 @@ export default function MissionRehearsal({ mission, onDone }: MissionRehearsalPr
           {mission.realWorld_uk.map((item, i) => (
             <label
               key={i}
-              className="flex items-start gap-3 min-h-tap rounded-md bg-surface px-4 py-3 ring-1 ring-white/10 cursor-pointer"
+              className="flex items-start gap-3 min-h-tap rounded-md bg-surface px-4 py-3 ring-1 ring-hairline cursor-pointer"
             >
               <input
                 type="checkbox"

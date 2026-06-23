@@ -152,7 +152,7 @@ function Card({ item, onGrade }: { item: Item; onGrade: (g: Grade) => void }) {
         </Button>
       ) : (
         <div className="mt-2 flex w-full flex-col gap-4">
-          <div className="rounded-md bg-surface p-4 text-center ring-1 ring-white/10">
+          <div className="rounded-md bg-surface p-4 text-center ring-1 ring-hairline">
             <p className="text-xl font-semibold text-text">{item.uk}</p>
             <p className="mt-2 text-sm text-primary">{item.example_ro}</p>
             <p className="text-sm text-text-muted">{item.example_uk}</p>
