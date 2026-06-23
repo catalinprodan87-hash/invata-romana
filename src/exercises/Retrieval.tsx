@@ -71,7 +71,7 @@ export default function Retrieval({ exercise, item: itemProp, onDone }: Exercise
               variant="secondary"
               onClick={() => handleGrade('easy')}
               disabled={done}
-              className="w-full text-sm text-green-700"
+              className="w-full text-sm text-success"
             >
               {t.easy}
             </Button>

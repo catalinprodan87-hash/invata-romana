@@ -245,10 +245,10 @@ function Round({ round, streak, onAnswer, onNext, isLast }: RoundProps) {
   }
 
   const stateStyles: Record<OptionState, string> = {
-    idle: 'bg-surface text-text ring-1 ring-black/10',
-    correct: 'bg-green-100 text-green-800 ring-2 ring-green-500',
-    wrong: 'bg-red-100 text-red-800 ring-2 ring-red-400',
-    reveal: 'bg-surface text-text-muted ring-1 ring-black/10 opacity-60',
+    idle: 'bg-surface text-text ring-1 ring-white/15',
+    correct: 'bg-success-tint text-success ring-2 ring-success',
+    wrong: 'bg-danger-tint text-danger ring-2 ring-danger',
+    reveal: 'bg-surface text-text-muted ring-1 ring-white/15 opacity-60',
   }
 
   const timedOut = msLeft <= 0 && selected === null
@@ -256,10 +256,10 @@ function Round({ round, streak, onAnswer, onNext, isLast }: RoundProps) {
   return (
     <main className="mx-auto flex max-w-screen-sm flex-col gap-5 px-4 pb-12 pt-4">
       {/* Timer */}
-      <div className="h-2 w-full overflow-hidden rounded-full bg-surface ring-1 ring-black/5">
+      <div className="h-2 w-full overflow-hidden rounded-full bg-surface ring-1 ring-white/10">
         <div
           className={`h-full rounded-full transition-[width] duration-100 ease-linear ${
-            msLeft / ROUND_MS < 0.3 ? 'bg-red-400' : 'bg-primary'
+            msLeft / ROUND_MS < 0.3 ? 'bg-danger' : 'bg-primary'
           }`}
           style={{ width: `${Math.max(0, (msLeft / ROUND_MS) * 100)}%` }}
         />
@@ -304,7 +304,7 @@ function Round({ round, streak, onAnswer, onNext, isLast }: RoundProps) {
       {answered && (
         <>
           {timedOut && (
-            <p className="text-center text-sm font-semibold text-red-600">{t.gameTimeUp}</p>
+            <p className="text-center text-sm font-semibold text-danger">{t.gameTimeUp}</p>
           )}
           <Button onClick={onNext} className="w-full">
             {isLast ? t.gameOver : t.next}

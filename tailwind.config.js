@@ -9,6 +9,7 @@ export default {
           DEFAULT: 'var(--color-primary)',
           dark: 'var(--color-primary-dark)',
         },
+        onPrimary: 'var(--color-on-primary)',
         accent: 'var(--color-accent)',
         bg: 'var(--color-bg)',
         surface: 'var(--color-surface)',
@@ -19,6 +20,9 @@ export default {
         success: 'var(--color-success)',
         warning: 'var(--color-warning)',
         danger: 'var(--color-danger)',
+        'success-tint': 'var(--color-success-tint)',
+        'warning-tint': 'var(--color-warning-tint)',
+        'danger-tint': 'var(--color-danger-tint)',
       },
       borderRadius: {
         sm: 'var(--radius-sm)',

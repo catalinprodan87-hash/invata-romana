@@ -46,10 +46,10 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
   }
 
   const stateStyles: Record<OptionState, string> = {
-    idle: 'bg-surface text-text ring-1 ring-black/10',
-    correct: 'bg-green-100 text-green-800 ring-2 ring-green-500',
-    wrong: 'bg-red-100 text-red-800 ring-2 ring-red-400',
-    reveal: 'bg-surface text-text-muted ring-1 ring-black/10 opacity-60',
+    idle: 'bg-surface text-text ring-1 ring-white/15',
+    correct: 'bg-success-tint text-success ring-2 ring-success',
+    wrong: 'bg-danger-tint text-danger ring-2 ring-danger',
+    reveal: 'bg-surface text-text-muted ring-1 ring-white/15 opacity-60',
   }
 
   return (
@@ -79,10 +79,10 @@ export default function MinimalPairs({ exercise, onDone }: ExerciseProps<Minimal
             >
               {option}
               {answered && state === 'correct' && (
-                <span className="ml-2 text-base font-normal text-green-700">{t.correct}</span>
+                <span className="ml-2 text-base font-normal text-success">{t.correct}</span>
               )}
               {answered && state === 'wrong' && (
-                <span className="ml-2 text-base font-normal text-red-600">{t.incorrect}</span>
+                <span className="ml-2 text-base font-normal text-danger">{t.incorrect}</span>
               )}
             </button>
           )

@@ -88,7 +88,7 @@ export default function Shadowing({ exercise, item: itemProp, onDone }: Exercise
       </div>
 
       {/* Listen to model */}
-      <div className="flex items-center gap-4 rounded-md bg-surface p-4 ring-1 ring-black/5">
+      <div className="flex items-center gap-4 rounded-md bg-surface p-4 ring-1 ring-white/10">
         <SpeakButton text={item.ro} size="lg" label={t.playModel} />
         <p className="text-base font-medium text-text">{t.playModel}</p>
       </div>

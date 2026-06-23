@@ -26,7 +26,7 @@ function Segmented<T extends string | number>({
             onClick={() => onChange(o.value)}
             className={[
               'min-h-tap flex-1 rounded-md px-3 py-2 font-semibold transition-colors',
-              active ? 'bg-primary text-white' : 'bg-bg text-text ring-1 ring-black/10',
+              active ? 'bg-primary text-onPrimary' : 'bg-bg text-text ring-1 ring-white/15',
             ].join(' ')}
           >
             {o.label}
@@ -62,7 +62,7 @@ export default function Settings() {
       </header>
 
       <main className="mx-auto flex max-w-screen-sm flex-col gap-4 px-4 pb-12 pt-4">
-        <section className="rounded-lg bg-surface p-4 ring-1 ring-black/5">
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
           <p className="mb-2 text-base font-semibold text-text">{t.textSize}</p>
           <Segmented<TextSize>
             value={textSize}
@@ -74,7 +74,7 @@ export default function Settings() {
           />
         </section>
 
-        <section className="rounded-lg bg-surface p-4 ring-1 ring-black/5">
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
           <p className="mb-2 text-base font-semibold text-text">{t.dailyGoal}</p>
           <Segmented<number>
             value={dailyGoal}
@@ -87,7 +87,7 @@ export default function Settings() {
           />
         </section>
 
-        <section className="rounded-lg bg-surface p-4 ring-1 ring-black/5">
+        <section className="rounded-lg bg-surface p-4 ring-1 ring-white/10">
           <p className="text-base font-semibold text-text">{t.about}</p>
           <p className="mt-1 text-sm text-text-muted">{t.aboutBody}</p>
         </section>

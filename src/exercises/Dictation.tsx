@@ -47,10 +47,18 @@ export default function Dictation({ exercise, item: itemProp, onDone }: Exercise
 
   const tierBg = result
     ? result.tier === 'great'
-      ? 'bg-green-50 ring-2 ring-green-400'
+      ? 'bg-success-tint ring-2 ring-success'
       : result.tier === 'close'
-        ? 'bg-amber-50 ring-2 ring-amber-400'
-        : 'bg-red-50 ring-2 ring-red-300'
+        ? 'bg-warning-tint ring-2 ring-warning'
+        : 'bg-danger-tint ring-2 ring-danger'
+    : ''
+
+  const tierText = result
+    ? result.tier === 'great'
+      ? 'text-success'
+      : result.tier === 'close'
+        ? 'text-warning'
+        : 'text-danger'
     : ''
 
   const tierLabel = result
@@ -82,7 +90,7 @@ export default function Dictation({ exercise, item: itemProp, onDone }: Exercise
         disabled={result !== null}
         placeholder={t.typeWhatYouHear}
         className={[
-          'w-full min-h-tap rounded-md border border-black/20 px-4 py-3 text-lg text-text',
+          'w-full min-h-tap rounded-md border border-white/20 px-4 py-3 text-lg text-text',
           'bg-surface placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary',
           'disabled:opacity-70',
           result !== null ? tierBg : '',
@@ -92,7 +100,7 @@ export default function Dictation({ exercise, item: itemProp, onDone }: Exercise
       {/* Feedback panel */}
       {result !== null && (
         <div className={['rounded-md p-4 space-y-2', tierBg].join(' ')}>
-          <p className="font-semibold text-base">
+          <p className={['font-semibold text-base', tierText].join(' ')}>
             {tierLabel}
           </p>
           {result.diacriticHint && (

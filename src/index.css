@@ -3,17 +3,22 @@
 @tailwind utilities;
 
 :root {
-  /* ---- Design tokens ---- */
-  --color-primary: #1e5aa8;
-  --color-primary-dark: #16407a;
-  --color-accent: #f2c037;
-  --color-bg: #f7f9fc;
-  --color-surface: #ffffff;
-  --color-text: #1a2233;
-  --color-text-muted: #5b6678;
-  --color-success: #2e9e5b;
-  --color-warning: #e08a1e;
-  --color-danger: #d2433a;
+  /* ---- Design tokens — "Focus" dark theme (gold accent on charcoal) ---- */
+  --color-primary: #ef9f27;        /* warm gold accent */
+  --color-primary-dark: #ba7517;   /* pressed/hover gold */
+  --color-on-primary: #412402;     /* dark text that sits ON the gold accent */
+  --color-accent: #ef9f27;
+  --color-bg: #16181d;             /* page (charcoal) */
+  --color-surface: #21242b;        /* cards / panels */
+  --color-text: #f2f1ec;           /* off-white */
+  --color-text-muted: #9a9a93;     /* secondary text */
+  --color-success: #4ade80;        /* bright green, legible on dark */
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;         /* bright red, legible on dark */
+  /* Subtle tinted panels for correct/close/wrong feedback (sit on the dark bg). */
+  --color-success-tint: #18301f;
+  --color-warning-tint: #322611;
+  --color-danger-tint: #341a1b;
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -23,7 +28,7 @@
      the type scale is defined in rem, the whole UI scales with it. */
   font-size: 16px;
 
-  color-scheme: light;
+  color-scheme: dark;
   -webkit-text-size-adjust: 100%;
 }
 
