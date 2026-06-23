@@ -1,0 +1,78 @@
+{
+  "id": "b1-appointments-03",
+  "level": "B1",
+  "unit_uk": "Документи та запис на прийом",
+  "title_uk": "Вирішення проблеми",
+  "goal_uk": "Сказати «У мене проблема», запитати «Що мені робити?» і зрозуміти, коли просять зачекати чи прийти ще раз.",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua. Am o problemă.", "uk": "Добрий день. У мене проблема." },
+    { "speaker": "Funcționar", "ro": "Bună ziua. Ce problemă aveți?", "uk": "Добрий день. Яка у вас проблема?" },
+    { "speaker": "Olena", "ro": "Am o problemă cu un document. Ce trebuie să fac?", "uk": "У мене проблема з документом. Що мені треба робити?" },
+    { "speaker": "Funcționar", "ro": "Aveți o programare?", "uk": "У вас є запис на прийом?" },
+    { "speaker": "Olena", "ro": "Nu. Scuzați-mă.", "uk": "Ні. Перепрошую." },
+    { "speaker": "Funcționar", "ro": "Așteptați aici, vă rog.", "uk": "Зачекайте тут, будь ласка." },
+    { "speaker": "Funcționar", "ro": "Reveniți mâine la ghișeul doi.", "uk": "Поверніться завтра до віконця номер два." },
+    { "speaker": "Olena", "ro": "Am înțeles. Mulțumesc!", "uk": "Зрозуміла. Дякую!" }
+  ],
+  "newItemIds": [
+    "problema",
+    "am-o-problema",
+    "ce-trebuie-sa-fac",
+    "reveniti",
+    "asteptati",
+    "maine",
+    "ghiseu",
+    "am-inteles"
+  ],
+  "grammarNotes_uk": [
+    "Щоб попросити пораду, кажуть «Ce trebuie să fac?» («Що мені треба робити?»). Це та сама конструкція «trebuie să + дієслово», але в питанні.",
+    "Команди на «Ви» часто закінчуються на «-ți»: «Așteptați» (зачекайте), «Reveniți» (поверніться), «Sunați» (зателефонуйте). Почувши «Reveniți mâine», знайте: вас просять прийти завтра ще раз."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "problema"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "ce-trebuie-sa-fac"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "reveniti",
+      "distractorId": "asteptati"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як запитати, що вам треба робити?",
+      "options_uk": ["Am o problemă.", "Ce trebuie să fac?", "Reveniți mâine."],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Службовець каже «Reveniți mâine». Що це означає?",
+      "options_uk": ["Зачекайте тут", "Поверніться завтра", "Зателефонуйте зараз"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Скажіть, що у вас проблема.",
+      "answer_ro": "Am o problemă.",
+      "wordBank": ["Am", "o", "problemă"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Поясніть в установі, що у вас проблема, і запитайте, що робити далі — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Am o problemă.", "uk": "Добрий день. У мене проблема." },
+      { "speaker": "Ви", "ro": "Am o problemă cu un document. Ce trebuie să fac?", "uk": "У мене проблема з документом. Що мені треба робити?" },
+      { "speaker": "Ви", "ro": "Am înțeles. Mulțumesc!", "uk": "Зрозуміло. Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Почніть прямо: «Am o problemă».",
+      "Поясніть коротко й запитайте «Ce trebuie să fac?».",
+      "Слухайте ключові відповіді: «Așteptați» (зачекайте) і «Reveniți mâine» (прийдіть завтра).",
+      "Якщо назвуть «ghișeul» з номером — запам'ятайте число (unu, doi, trei...)."
+    ]
+  }
+}

@@ -8,17 +8,31 @@ import lesson04 from './lessons/a1-survival/04.json'
 import errands01 from './lessons/a2-errands/01.json'
 import errands02 from './lessons/a2-errands/02.json'
 import errands03 from './lessons/a2-errands/03.json'
+import appointments01 from './lessons/b1-appointments/01.json'
+import appointments02 from './lessons/b1-appointments/02.json'
+import appointments03 from './lessons/b1-appointments/03.json'
 
-const lessons = [lesson01, lesson02, lesson03, lesson04, errands01, errands02, errands03]
+const lessons = [
+  lesson01,
+  lesson02,
+  lesson03,
+  lesson04,
+  errands01,
+  errands02,
+  errands03,
+  appointments01,
+  appointments02,
+  appointments03,
+]
 
 test('item bank passes validation', () => {
   expect(() => validateItemBank(itemBank)).not.toThrow()
 })
 
-test('item bank has A1/A2 items with pronunciations', () => {
+test('item bank has A1/A2/B1 items with pronunciations', () => {
   expect(itemBank.items.length).toBeGreaterThanOrEqual(50)
   for (const item of itemBank.items) {
-    expect(['A1', 'A2']).toContain(item.cefr)
+    expect(['A1', 'A2', 'B1']).toContain(item.cefr)
     expect(item.pron_uk.trim()).not.toBe('')
   }
 })

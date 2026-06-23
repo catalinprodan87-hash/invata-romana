@@ -1,0 +1,82 @@
+{
+  "id": "b1-appointments-02",
+  "level": "B1",
+  "unit_uk": "Документи та запис на прийом",
+  "title_uk": "У державній установі",
+  "goal_uk": "Пояснити свою ситуацію в установі: сказати «Я біженець з України», показати документи й заповнити бланк.",
+  "dialogue": [
+    { "speaker": "Funcționar", "ro": "Bună ziua. Ce căutați?", "uk": "Добрий день. Що ви шукаєте?" },
+    { "speaker": "Olena", "ro": "Bună ziua. Sunt refugiat din Ucraina.", "uk": "Добрий день. Я біженка з України." },
+    { "speaker": "Funcționar", "ro": "Bine. Aveți pașaportul?", "uk": "Добре. У вас є паспорт?" },
+    { "speaker": "Olena", "ro": "Da. Am venit acum o lună.", "uk": "Так. Я приїхала місяць тому." },
+    { "speaker": "Funcționar", "ro": "Bine. Trebuie să completați formularul.", "uk": "Добре. Вам треба заповнити бланк." },
+    { "speaker": "Olena", "ro": "Completez formularul aici? Unde semnez?", "uk": "Я заповнюю бланк тут? Де я підписую?" },
+    { "speaker": "Funcționar", "ro": "Aici. Vă rog, semnați.", "uk": "Тут. Будь ласка, підпишіть." },
+    { "speaker": "Olena", "ro": "Mulțumesc mult!", "uk": "Дуже дякую!" }
+  ],
+  "newItemIds": [
+    "refugiat",
+    "sunt-refugiat",
+    "pasaport",
+    "document",
+    "formular",
+    "completez",
+    "trebuie-sa-completez",
+    "semnez",
+    "am-venit",
+    "acum-o-luna",
+    "functionar",
+    "trebuie-sa"
+  ],
+  "grammarNotes_uk": [
+    "Минулий час «Am venit» («я приїхав/приїхала») будується як «am + дієприкметник»: «Am venit acum o lună» (приїхав місяць тому). Так само «Am completat» (я заповнив), «Am semnat» (я підписав).",
+    "«Trebuie să + дієслово» означає «треба / мушу щось зробити»: «Trebuie să completez formularul» (мені треба заповнити бланк). Службовець скаже вам це на «Ви»: «Trebuie să completați»."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "formular"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "sunt-refugiat"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "completez",
+      "distractorId": "semnez"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати «я біженець з України»?",
+      "options_uk": ["Sunt din Ucraina.", "Sunt refugiat din Ucraina.", "Am venit acum o lună."],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Службовець каже «Trebuie să completați formularul». Що треба зробити?",
+      "options_uk": ["Заповнити бланк", "Показати паспорт", "Зачекати"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Скажіть, що ви приїхали місяць тому.",
+      "answer_ro": "Am venit acum o lună.",
+      "wordBank": ["Am", "venit", "acum", "o", "lună"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "В установі поясніть свою ситуацію й покажіть документи румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Sunt refugiat din Ucraina.", "uk": "Добрий день. Я біженець з України." },
+      { "speaker": "Ви", "ro": "Am venit acum o lună. Am pașaportul.", "uk": "Я приїхав місяць тому. У мене є паспорт." },
+      { "speaker": "Ви", "ro": "Completez formularul aici? Mulțumesc!", "uk": "Я заповнюю бланк тут? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Представтеся: «Sunt refugiat din Ucraina».",
+      "Будьте готові показати «pașaportul» і сказати «Am venit acum o lună».",
+      "Якщо просять заповнити бланк — уточніть «Completez formularul aici?» і «Unde semnez?».",
+      "Не соромтеся попросити «Mai rar, vă rog», якщо говорять швидко."
+    ]
+  }
+}

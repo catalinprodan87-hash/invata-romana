@@ -1,0 +1,84 @@
+{
+  "id": "b1-appointments-01",
+  "level": "B1",
+  "unit_uk": "Документи та запис на прийом",
+  "title_uk": "Запис на прийом",
+  "goal_uk": "Записатися на прийом особисто або по телефону: назвати день і годину та зрозуміти запитання «La ce oră?».",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua! Vreau să fac o programare.", "uk": "Добрий день! Я хочу записатися на прийом." },
+    { "speaker": "Recepție", "ro": "Bună ziua. Aveți timp luni dimineața?", "uk": "Добрий день. У вас є час у понеділок зранку?" },
+    { "speaker": "Olena", "ro": "Nu, luni nu pot. Aveți timp marți?", "uk": "Ні, у понеділок не можу. У вас є час у вівторок?" },
+    { "speaker": "Recepție", "ro": "Da. Marți după-amiază, la ora trei.", "uk": "Так. У вівторок після обіду, о третій годині." },
+    { "speaker": "Olena", "ro": "La ce oră, vă rog? Mai rar.", "uk": "О котрій годині, будь ласка? Повільніше." },
+    { "speaker": "Recepție", "ro": "La ora trei. Telefonul, vă rog.", "uk": "О третій годині. Ваш телефон, будь ласка." },
+    { "speaker": "Olena", "ro": "Da, sigur. Mulțumesc!", "uk": "Так, звісно. Дякую!" },
+    { "speaker": "Recepție", "ro": "Cu plăcere. Sunați, vă rog.", "uk": "Будь ласка. Телефонуйте, будь ласка." }
+  ],
+  "newItemIds": [
+    "programare",
+    "vreau-sa-fac-o-programare",
+    "aveti-timp",
+    "luni",
+    "marti",
+    "miercuri",
+    "joi",
+    "vineri",
+    "dimineata",
+    "dupa-amiaza",
+    "ora",
+    "la-ce-ora",
+    "telefon",
+    "sunati"
+  ],
+  "grammarNotes_uk": [
+    "Щоб записатися, кажуть «Vreau să fac o programare» — дослівно «хочу зробити запис». Конструкція «Vreau să + дієслово» («хочу + щось зробити») дуже корисна: «Vreau să plătesc», «Vreau să fac o programare».",
+    "Дні тижня в румунській: luni (пн), marți (вт), miercuri (ср), joi (чт), vineri (пт). Час доби — «dimineața» (зранку) і «după-amiază» (по обіді). Годину питають «La ce oră?» («О котрій годині?»)."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "programare"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "vreau-sa-fac-o-programare"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "marti",
+      "distractorId": "miercuri"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати «я хочу записатися на прийом»?",
+      "options_uk": ["Vreau să fac o programare.", "La ce oră este?", "Aveți timp luni?"],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Адміністратор питає «La ce oră?». Про що йдеться?",
+      "options_uk": ["Про день тижня", "Про годину прийому", "Про номер телефону"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Запитайте, чи є вільний час у вівторок.",
+      "answer_ro": "Aveți timp marți?",
+      "wordBank": ["Aveți", "timp", "marți"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зателефонуйте або зайдіть кудись (до лікаря, в установу) і запишіться на прийом румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua! Vreau să fac o programare.", "uk": "Добрий день! Я хочу записатися на прийом." },
+      { "speaker": "Ви", "ro": "Aveți timp marți după-amiază?", "uk": "У вас є час у вівторок після обіду?" },
+      { "speaker": "Ви", "ro": "La ce oră, vă rog? Mulțumesc!", "uk": "О котрій годині, будь ласка? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Почніть із «Vreau să fac o programare».",
+      "Запропонуйте день: «Aveți timp luni / marți / miercuri?». Додайте «dimineața» або «după-amiază».",
+      "Якщо не розчули годину — запитайте «La ce oră, vă rog?» і попросіть «Mai rar».",
+      "Будьте готові назвати «telefonul» і подякуйте «Mulțumesc!»."
+    ]
+  }
+}
