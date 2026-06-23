@@ -1,0 +1,77 @@
+{
+  "id": "b2-work-03",
+  "level": "B2",
+  "unit_uk": "Робота і співбесіда",
+  "title_uk": "Перший день на роботі",
+  "goal_uk": "Перший день: зрозуміти графік («La ce oră încep?»), спитати практичне («Unde este pauza?»), уточнити про договір і сказати, коли почнете «Voi începe luni».",
+  "dialogue": [
+    { "speaker": "Olena", "ro": "Bună ziua. Sunt Olena. Voi începe luni.", "uk": "Добрий день. Я Олена. Я почну в понеділок." },
+    { "speaker": "Șeful", "ro": "Bună ziua, Olena. Bine!", "uk": "Добрий день, Олено. Добре!" },
+    { "speaker": "Olena", "ro": "Mulțumesc. La ce oră încep luni?", "uk": "Дякую. О котрій годині я починаю в понеділок?" },
+    { "speaker": "Șeful", "ro": "La ora opt, dimineața.", "uk": "О восьмій, зранку." },
+    { "speaker": "Olena", "ro": "Am înțeles. Și unde este pauza?", "uk": "Зрозуміло. А де перерва?" },
+    { "speaker": "Șeful", "ro": "Pauza este la ora unu. Colegii sunt aici.", "uk": "Перерва о першій. Колеги тут." },
+    { "speaker": "Olena", "ro": "Am o întrebare despre contract. Când semnez?", "uk": "У мене є запитання про договір. Коли я підписую?" },
+    { "speaker": "Șeful", "ro": "Semnați contractul acum. Bine!", "uk": "Підпишіть договір зараз. Добре!" }
+  ],
+  "newItemIds": [
+    "voi-incepe",
+    "incep",
+    "pauza",
+    "cand",
+    "colegii",
+    "seful",
+    "despre"
+  ],
+  "grammarNotes_uk": [
+    "Майбутнє можна сказати двома способами: «Voi începe luni» (я почну в понеділок) — справжній майбутній час, або просто теперішнім «Încep luni» (починаю в понеділок). У розмові обидва звучать природно.",
+    "«Când?» означає «коли?»: «Când semnez?» (коли я підписую?), «Când încep?» (коли я починаю?). А щоб уточнити час, кажуть звичне «La ce oră?» — «La ce oră încep?» (о котрій годині я починаю?)."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "pauza"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "voi-incepe"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "incep",
+      "distractorId": "voi-incepe"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати «я почну в понеділок»?",
+      "options_uk": ["Voi începe luni.", "Am lucrat luni.", "Caut de lucru luni."],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Ви питаєте «Unde este pauza?». Що ви хочете знати?",
+      "options_uk": ["Де перерва", "Яка зарплата", "Який графік"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Спитайте, о котрій годині ви починаєте.",
+      "answer_ro": "La ce oră încep?",
+      "wordBank": ["La", "ce", "oră", "încep"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Перший день на роботі: привітайтеся, уточніть час початку, спитайте про перерву й договір — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Voi începe luni. La ce oră încep?", "uk": "Добрий день. Я почну в понеділок. О котрій годині я починаю?" },
+      { "speaker": "Ви", "ro": "Am înțeles. Unde este pauza?", "uk": "Зрозуміло. Де перерва?" },
+      { "speaker": "Ви", "ro": "Am o întrebare despre contract. Când semnez? Mulțumesc!", "uk": "У мене є запитання про договір. Коли я підписую? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Привітайтеся й скажіть, коли почнете: «Voi începe luni».",
+      "Уточніть час: «La ce oră încep?».",
+      "Спитайте про перерву: «Unde este pauza?».",
+      "Уточніть договір: «Când semnez contractul?»."
+    ]
+  }
+}

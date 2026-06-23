@@ -14,6 +14,9 @@ import appointments03 from './lessons/b1-appointments/03.json'
 import housing01 from './lessons/b1-housing/01.json'
 import housing02 from './lessons/b1-housing/02.json'
 import housing03 from './lessons/b1-housing/03.json'
+import work01 from './lessons/b2-work/01.json'
+import work02 from './lessons/b2-work/02.json'
+import work03 from './lessons/b2-work/03.json'
 
 const lessons = [
   lesson01,
@@ -29,16 +32,19 @@ const lessons = [
   housing01,
   housing02,
   housing03,
+  work01,
+  work02,
+  work03,
 ]
 
 test('item bank passes validation', () => {
   expect(() => validateItemBank(itemBank)).not.toThrow()
 })
 
-test('item bank has A1/A2/B1 items with pronunciations', () => {
+test('item bank has A1/A2/B1/B2 items with pronunciations', () => {
   expect(itemBank.items.length).toBeGreaterThanOrEqual(50)
   for (const item of itemBank.items) {
-    expect(['A1', 'A2', 'B1']).toContain(item.cefr)
+    expect(['A1', 'A2', 'B1', 'B2']).toContain(item.cefr)
     expect(item.pron_uk.trim()).not.toBe('')
   }
 })

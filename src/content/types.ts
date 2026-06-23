@@ -1,4 +1,4 @@
-export type Cefr = 'A1' | 'A2' | 'B1'
+export type Cefr = 'A1' | 'A2' | 'B1' | 'B2'
 
 export interface Item {
   id: string

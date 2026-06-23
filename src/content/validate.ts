@@ -1,6 +1,6 @@
 import type { Cefr, Exercise, ItemBank, Lesson } from './types'
 
-const CEFR: Cefr[] = ['A1', 'A2', 'B1']
+const CEFR: Cefr[] = ['A1', 'A2', 'B1', 'B2']
 
 function fail(msg: string): never { throw new Error(`Content invalid: ${msg}`) }
 function str(v: unknown, where: string): string {
@@ -23,7 +23,7 @@ export function validateItemBank(data: unknown): asserts data is ItemBank {
     str(it.example_ro, `item ${id}.example_ro`)
     str(it.example_uk, `item ${id}.example_uk`)
     if (typeof it.freqRank !== 'number') fail(`item ${id}.freqRank must be a number`)
-    if (!CEFR.includes(it.cefr)) fail(`item ${id}.cefr must be A1/A2/B1`)
+    if (!CEFR.includes(it.cefr)) fail(`item ${id}.cefr must be A1/A2/B1/B2`)
     if (!Array.isArray(it.tags)) fail(`item ${id}.tags must be an array`)
   }
 }

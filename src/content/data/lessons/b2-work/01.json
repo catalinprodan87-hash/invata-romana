@@ -1,0 +1,84 @@
+{
+  "id": "b2-work-01",
+  "level": "B2",
+  "unit_uk": "Робота і співбесіда",
+  "title_uk": "Шукаю роботу",
+  "goal_uk": "Сказати, що ви шукаєте роботу: «Caut de lucru», назвати свою професію, розповісти про минулий досвід «Am lucrat ca...» і спитати, чи наймають.",
+  "dialogue": [
+    { "speaker": "Andrii", "ro": "Bună ziua. Caut de lucru. Angajați acum?", "uk": "Добрий день. Я шукаю роботу. Ви зараз наймаєте?" },
+    { "speaker": "Angajator", "ro": "Bună ziua. Da. Care este profesia?", "uk": "Добрий день. Так. Яка професія?" },
+    { "speaker": "Andrii", "ro": "Sunt șofer. Am lucrat ca șofer în Ucraina.", "uk": "Я водій. Я працював водієм в Україні." },
+    { "speaker": "Angajator", "ro": "Aveți experiență?", "uk": "У вас є досвід?" },
+    { "speaker": "Andrii", "ro": "Da, am experiență. Aveți un loc de muncă?", "uk": "Так, у мене є досвід. У вас є робоче місце?" },
+    { "speaker": "Angajator", "ro": "Da. Aveți un interviu mâine.", "uk": "Так. У вас співбесіда завтра." },
+    { "speaker": "Andrii", "ro": "Mulțumesc mult!", "uk": "Дуже дякую!" }
+  ],
+  "newItemIds": [
+    "caut-de-lucru",
+    "de-lucru",
+    "loc-de-munca",
+    "angajati",
+    "profesie",
+    "lucrez",
+    "am-lucrat",
+    "ca",
+    "in",
+    "sofer",
+    "bucatar",
+    "vanzator",
+    "experienta",
+    "interviu",
+    "care-este"
+  ],
+  "grammarNotes_uk": [
+    "Щоб розповісти про минулий досвід, кажуть «Am lucrat ca + професія»: «Am lucrat ca șofer» (я працював водієм). «Ca» тут означає «на посаді / у ролі». Теперішній час — «Lucrez ca bucătar» (я працюю кухарем).",
+    "Назвати професію просто: «Sunt + професія» без артикля — «Sunt șofer», «Sunt bucătar», «Sunt vânzător». А щоб спитати про вакансію, кажуть «Angajați?» (наймаєте?) або «Aveți un loc de muncă?» (у вас є робоче місце?)."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "loc-de-munca"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "caut-de-lucru"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "lucrez",
+      "distractorId": "am-lucrat"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як сказати «я шукаю роботу»?",
+      "options_uk": ["Caut de lucru.", "Am lucrat ca șofer.", "Aveți experiență?"],
+      "answerIndex": 0
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Роботодавець питає «Aveți experiență?». Про що йдеться?",
+      "options_uk": ["Про вашу адресу", "Про ваш досвід роботи", "Про вашу зарплату"],
+      "answerIndex": 1
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Скажіть, що ви працювали водієм в Україні.",
+      "answer_ro": "Am lucrat ca șofer în Ucraina.",
+      "wordBank": ["Am", "lucrat", "ca", "șofer", "în", "Ucraina"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зайдіть до закладу або зателефонуйте за оголошенням і скажіть, що шукаєте роботу — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Caut de lucru. Angajați acum?", "uk": "Добрий день. Я шукаю роботу. Ви зараз наймаєте?" },
+      { "speaker": "Ви", "ro": "Sunt bucătar. Am lucrat ca bucătar în Ucraina.", "uk": "Я кухар. Я працював кухарем в Україні." },
+      { "speaker": "Ви", "ro": "Am experiență. Aveți un loc de muncă? Mulțumesc!", "uk": "У мене є досвід. У вас є робоче місце? Дякую!" }
+    ],
+    "realWorld_uk": [
+      "Почніть із «Caut de lucru» і спитайте «Angajați?».",
+      "Назвіть професію: «Sunt șofer / bucătar / vânzător».",
+      "Розкажіть про досвід: «Am lucrat ca... în Ucraina».",
+      "Спитайте про вакансію: «Aveți un loc de muncă?»."
+    ]
+  }
+}

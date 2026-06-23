@@ -1,0 +1,77 @@
+{
+  "id": "b2-work-02",
+  "level": "B2",
+  "unit_uk": "Робота і співбесіда",
+  "title_uk": "Співбесіда",
+  "goal_uk": "Пройти співбесіду: ввічливо сказати «Aș vrea să lucrez aici», розповісти про свої сильні сторони, спитати про графік і зарплату.",
+  "dialogue": [
+    { "speaker": "Angajator", "ro": "Bună ziua. Aveți experiență?", "uk": "Добрий день. У вас є досвід?" },
+    { "speaker": "Olena", "ro": "Bună ziua. Da, am lucrat ca vânzător. Aș vrea să lucrez aici.", "uk": "Добрий день. Так, я працювала продавцем. Я хотіла би працювати тут." },
+    { "speaker": "Angajator", "ro": "Bine. Aveți experiență.", "uk": "Добре. У вас є досвід." },
+    { "speaker": "Olena", "ro": "Da. Sunt punctual. Care este programul?", "uk": "Так. Я пунктуальна. Який графік роботи?" },
+    { "speaker": "Angajator", "ro": "De luni, dimineața.", "uk": "З понеділка, зранку." },
+    { "speaker": "Olena", "ro": "Bine. Și cât este salariul?", "uk": "Добре. А яка зарплата?" },
+    { "speaker": "Angajator", "ro": "Salariul este o mie de lei. Aveți o întrebare?", "uk": "Зарплата — тисяча леїв. У вас є запитання?" },
+    { "speaker": "Olena", "ro": "Nu acum. Mulțumesc mult!", "uk": "Зараз ні. Дуже дякую!" }
+  ],
+  "newItemIds": [
+    "as-vrea",
+    "as-vrea-sa-lucrez-aici",
+    "programul",
+    "salariul",
+    "pentru",
+    "punctual",
+    "intrebare"
+  ],
+  "grammarNotes_uk": [
+    "Ввічливе бажання передають умовним способом «Aș vrea să + дієслово»: «Aș vrea să lucrez aici» (я хотів би тут працювати). Це м'якше й чемніше за «Vreau să lucrez». На співбесіді це звучить професійно.",
+    "Щоб спитати про умови, кажуть «Care este programul?» (який графік?) і «Cât este salariul?» (яка зарплата?). Своя перевага — одним реченням: «Sunt punctual» (я пунктуальний), «Am experiență» (у мене є досвід)."
+  ],
+  "exercises": [
+    {
+      "type": "dictation",
+      "itemId": "salariul"
+    },
+    {
+      "type": "shadowing",
+      "itemId": "as-vrea-sa-lucrez-aici"
+    },
+    {
+      "type": "minimalPairs",
+      "itemId": "as-vrea",
+      "distractorId": "vreau"
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Як ввічливо сказати «я хотів би тут працювати»?",
+      "options_uk": ["Vreau să lucrez aici.", "Aș vrea să lucrez aici.", "Am lucrat aici."],
+      "answerIndex": 1
+    },
+    {
+      "type": "comprehension",
+      "question_uk": "Ви питаєте «Care este programul?». Про що ви питаєте?",
+      "options_uk": ["Про графік роботи", "Про зарплату", "Про досвід"],
+      "answerIndex": 0
+    },
+    {
+      "type": "production",
+      "prompt_uk": "Ввічливо скажіть, що ви хотіли би працювати тут.",
+      "answer_ro": "Aș vrea să lucrez aici.",
+      "wordBank": ["Aș", "vrea", "să", "lucrez", "aici"]
+    }
+  ],
+  "mission": {
+    "prompt_uk": "Зіграйте співбесіду: ввічливо скажіть, що хочете тут працювати, і спитайте про графік та зарплату — румунською.",
+    "lines": [
+      { "speaker": "Ви", "ro": "Bună ziua. Am experiență. Aș vrea să lucrez aici.", "uk": "Добрий день. У мене є досвід. Я хотів би працювати тут." },
+      { "speaker": "Ви", "ro": "Sunt punctual. Care este programul?", "uk": "Я пунктуальний. Який графік роботи?" },
+      { "speaker": "Ви", "ro": "Cât este salariul? Mulțumesc mult!", "uk": "Яка зарплата? Дуже дякую!" }
+    ],
+    "realWorld_uk": [
+      "Почніть ввічливо: «Aș vrea să lucrez aici».",
+      "Назвіть свою перевагу: «Sunt punctual» або «Am experiență».",
+      "Спитайте про графік: «Care este programul?».",
+      "Спитайте про зарплату: «Cât este salariul?»."
+    ]
+  }
+}

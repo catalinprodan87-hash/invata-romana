@@ -36,6 +36,15 @@
         "b1-housing-02",
         "b1-housing-03"
       ]
+    },
+    {
+      "id": "b2-work",
+      "unit_uk": "Робота і співбесіда",
+      "lessonIds": [
+        "b2-work-01",
+        "b2-work-02",
+        "b2-work-03"
+      ]
     }
   ]
 }
