@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { ExerciseProps } from './types'
 import type { Exercise } from '../content/types'
 import { getItemById } from '../content/load'
@@ -22,6 +22,13 @@ export default function Shadowing({ exercise, item: itemProp, onDone }: Exercise
   const [showPrivacy, setShowPrivacy] = useState(false)
   /** Whether the user has passed the consent gate and the real MicButton is active. */
   const [micUnlocked, setMicUnlocked] = useState(false)
+
+  // Free the recorded clip's object URL when it's replaced or the card unmounts.
+  useEffect(() => {
+    return () => {
+      if (recordedUrl) URL.revokeObjectURL(recordedUrl)
+    }
+  }, [recordedUrl])
 
   if (!item) {
     return (

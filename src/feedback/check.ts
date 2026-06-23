@@ -33,8 +33,10 @@ export type Tier = 'great' | 'close' | 'tryAgain'
 // The Romanian diacritic letters and their base forms, for hint detection.
 const DIACRITICS = 'ăâîșț'
 
-function diacriticHint(expected: string, got: string): string | undefined {
-  if (normalize(expected) !== normalize(got)) return undefined
+// Names the diacritic letters present in the (correct) expected answer. Only
+// meaningful when the answer matched apart from diacritics — the caller guards
+// that, so this just lists the letters to watch.
+function diacriticHint(expected: string): string | undefined {
   const offenders = [...expected].filter((ch) => DIACRITICS.includes(ch.toLowerCase()))
   return offenders.length ? `Зверніть увагу на «${[...new Set(offenders)].join(' ')}»` : undefined
 }
@@ -42,7 +44,7 @@ function diacriticHint(expected: string, got: string): string | undefined {
 export function gradeText(expected: string, got: string): { tier: Tier; correct: boolean; diacriticHint?: string } {
   const exact = normalize(expected) === normalize(got)
   if (exact) {
-    const hint = expected.trim().toLowerCase() === got.trim().toLowerCase() ? undefined : diacriticHint(expected, got)
+    const hint = expected.trim().toLowerCase() === got.trim().toLowerCase() ? undefined : diacriticHint(expected)
     return { tier: 'great', correct: true, diacriticHint: hint }
   }
   const s = similarity(expected, got)
