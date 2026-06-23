@@ -55,11 +55,19 @@ export function knownItemCount(states: Record<string, SrsState>): number {
 }
 
 /**
- * Returns how many items in the bank are "known" vs the total bank size.
+ * The visible frequency spine: the ~1000 most useful spoken words. The bank
+ * grows to fill this target, so progress is shown against the fixed goal
+ * ("X / 1000 useful words") rather than the current bank size — unless the
+ * bank ever grows past it.
+ */
+export const FREQUENCY_TARGET = 1000
+
+/**
+ * Returns how many words are "known" vs the frequency-spine target.
  */
 export function frequencyBackbone(
   states: Record<string, SrsState>,
   bank: Item[],
 ): { known: number; total: number } {
-  return { known: knownItemCount(states), total: bank.length }
+  return { known: knownItemCount(states), total: Math.max(FREQUENCY_TARGET, bank.length) }
 }

@@ -7,6 +7,7 @@ const Home = lazy(() => import('./pages/Home'))
 const Session = lazy(() => import('./pages/Session'))
 const Settings = lazy(() => import('./pages/Settings'))
 const Game = lazy(() => import('./pages/Game'))
+const Drill = lazy(() => import('./pages/Drill'))
 
 // In production the app is served from /invata-romana/ (GitHub Pages); BASE_URL
 // is '/' in dev. react-router wants the basename without a trailing slash.
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/session" element={<Session />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/drill" element={<Drill />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

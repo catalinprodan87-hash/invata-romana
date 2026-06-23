@@ -75,16 +75,17 @@ export default function Game() {
   const [correctCount, setCorrectCount] = useState(0)
   const best = useRef(readBest())
 
-  // Build the pool once: prefer words the learner has actually seen; fall back
-  // to the whole bank so the game is playable even on a fresh install. Needs at
-  // least 4 items so every round has 3 distractors.
+  // Build the pool once: prefer words the learner has actually seen; on a fresh
+  // install fall back to the most-frequent words (not the whole bank, which can
+  // hold ~1000 rarely-seen entries). Needs at least 4 items for 3 distractors.
   useEffect(() => {
     let active = true
     void (async () => {
       const states = await allItemStates()
       if (!active) return
       const seen = bank.filter((it) => states[it.id])
-      const chosenPool = seen.length >= 8 ? seen : bank
+      const mostFrequent = [...bank].sort((a, b) => a.freqRank - b.freqRank).slice(0, 40)
+      const chosenPool = seen.length >= 8 ? seen : mostFrequent
       setPool(chosenPool)
       setRounds(buildRounds(chosenPool))
       setPhase('playing')

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import type { Meta } from './store'
 import type { SrsState } from './scheduler'
 import type { Item } from '../content/types'
-import { bumpStreak, recordActivity, knownItemCount, frequencyBackbone } from './progress'
+import { bumpStreak, recordActivity, knownItemCount, frequencyBackbone, FREQUENCY_TARGET } from './progress'
 
 function makeMeta(overrides: Partial<Meta> = {}): Meta {
   return {
@@ -124,22 +124,22 @@ describe('knownItemCount', () => {
 // ── frequencyBackbone ─────────────────────────────────────────────────────────
 
 describe('frequencyBackbone', () => {
-  it('returns { known: 0, total: 0 } for empty inputs', () => {
-    expect(frequencyBackbone({}, [])).toEqual({ known: 0, total: 0 })
+  it('counts known but holds the fixed spine target for a small bank', () => {
+    expect(frequencyBackbone({}, [])).toEqual({ known: 0, total: FREQUENCY_TARGET })
   })
 
-  it('returns correct known and total counts', () => {
+  it('returns matured-known against the fixed target', () => {
     const states: Record<string, SrsState> = {
       a: makeState(7),
       b: makeState(3),
       c: makeState(10),
     }
     const bank = [makeItem('a'), makeItem('b'), makeItem('c'), makeItem('d')]
-    expect(frequencyBackbone(states, bank)).toEqual({ known: 2, total: 4 })
+    expect(frequencyBackbone(states, bank)).toEqual({ known: 2, total: FREQUENCY_TARGET })
   })
 
-  it('total equals bank.length regardless of states', () => {
-    const bank = [makeItem('x'), makeItem('y')]
-    expect(frequencyBackbone({}, bank)).toEqual({ known: 0, total: 2 })
+  it('grows the total past the target only once the bank exceeds it', () => {
+    const bank = Array.from({ length: FREQUENCY_TARGET + 5 }, (_, i) => makeItem(`w${i}`))
+    expect(frequencyBackbone({}, bank)).toEqual({ known: 0, total: FREQUENCY_TARGET + 5 })
   })
 })

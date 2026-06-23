@@ -78,4 +78,13 @@ export const t = {
   gameNewBest: 'Новий рекорд! 🏆',
   gamePlayAgain: 'Грати ще',
   backToHome: 'На головну',
+  drillTitle: 'Словник за частотою',
+  drillTagline: 'Вивчайте найчастіші слова — по 10 за раз.',
+  drillReveal: 'Показати переклад',
+  drillKnow: 'Вже знаю',
+  drillProgress: 'Слово {n} із {total}',
+  drillDone: 'Чудова робота!',
+  drillAdded: 'Додано до повторення: {count}',
+  drillMore: 'Ще 10 слів',
+  drillAllSeen: 'Ви вже почали всі слова зі словника! Повертайтеся, коли додамо нові.',
 } as const
